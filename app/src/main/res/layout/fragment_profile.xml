@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.codedirect.menu.ProfileFragment">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_profile"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginLeft="@dimen/margin_small"
-        android:layout_marginRight="@dimen/margin_small"/>
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:src="@drawable/ic_profile"-->
+<!--        android:layout_marginTop="@dimen/margin_small"-->
+<!--        android:layout_marginLeft="@dimen/margin_small"-->
+<!--        android:layout_marginRight="@dimen/margin_small"/>-->
+
     <TextView
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
@@ -75,7 +76,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rectangle_purple"
+        android:background="@drawable/login_button"
         android:layout_marginTop="@dimen/margin_small"
         android:text="Save Profile"
         android:textColor="@android:color/white"

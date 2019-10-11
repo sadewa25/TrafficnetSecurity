@@ -20,7 +20,7 @@
             android:layout_marginRight="@dimen/margin_supersmall"
             android:layout_marginLeft="@dimen/margin_supersmall"
             android:layout_marginTop="@dimen/margin_supersmall"
-            android:src="@drawable/ic_sensor"
+            android:src="@drawable/ic_home_black_24dp"
             />
 
         <LinearLayout
