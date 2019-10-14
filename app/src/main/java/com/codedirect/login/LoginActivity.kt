@@ -1,25 +1,28 @@
 package com.codedirect.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import com.codedirect.register.registerActivity
 import com.codedirect.trafficnetsecurity.MainActivity
 import com.codedirect.trafficnetsecurity.R
 import kotlinx.android.synthetic.main.activity_login.*
-import org.jetbrains.anko.startActivity
 
-class LoginActivity : AppCompatActivity(), View.OnClickListener{
-
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.login_btn -> {startActivity<MainActivity>()}
-        }
-    }
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        login_btn.setOnClickListener(this)
+        login_btn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        textRegister.setOnClickListener{
+            val intent = Intent(this, registerActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

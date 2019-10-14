@@ -8,4 +8,6 @@
     <color name="primaryLightColor">#333333</color>
     <color name="primaryDarkColor">#333333</color>
     <color name="primaryTextColor">#ffffff</color>
+    <color name="primaryLinkColor">#6AAE71</color>
+    <color name="primaryRadioColor">#2B8B35</color>
 </resources>

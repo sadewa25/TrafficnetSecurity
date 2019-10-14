@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codedirect.register.registerActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:fontFamily="@font/nunito"
+        android:padding="8dp"
+        android:text="@string/title_register"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subtitle_register"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/text_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:fontFamily="@font/nunito"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/title_username" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@drawable/rectangle_input"
+        android:padding="8dp"
+        android:hint="Sangsakawira"/>
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:layout_marginTop="@dimen/margin_small"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/title_email" />
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@drawable/rectangle_input"
+        android:padding="8dp"
+        android:hint="sangsakawira@gmail.com"/>
+    <TextView
+        android:id="@+id/text_ktp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:layout_marginTop="@dimen/margin_small"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/title_ktp" />
+    <EditText
+        android:id="@+id/et_ktp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@drawable/rectangle_input"
+        android:padding="8dp"
+        android:hint="356473829381889"/>
+    <TextView
+        android:id="@+id/text_kota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:layout_marginTop="@dimen/margin_small"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/title_kota" />
+    <EditText
+        android:id="@+id/et_kota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@drawable/rectangle_input"
+        android:padding="8dp"
+        android:hint="Kota Surabaya"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@drawable/login_button"
+        android:fontFamily="@font/nunito"
+        android:text="Save Profile"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold" />
+
+</LinearLayout>
