@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.codedirect.register.RegisterActivity">
+
+    tools:context="com.codedirect.menu.RegisterSensorActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
             android:padding="8dp"
-            android:text="@string/title_register"
+            android:text="@string/title_register_sensor"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_title"
@@ -30,6 +30,46 @@
             android:layout_height="wrap_content"
             android:text="@string/subtitle_register"
             android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/text_sensor_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/nunito"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="ID Sensor" />
+
+        <EditText
+            android:id="@+id/et_sensor_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/rectangle_input"
+            android:hint="345323432"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/text_ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/nunito"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="SSID" />
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/rectangle_input"
+            android:hint="WiFi-Kantor-Safevision"
+            android:padding="8dp" />
 
         <TextView
             android:id="@+id/text_username"
@@ -48,67 +88,7 @@
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
-            android:hint="@string/hint_username"
-            android:padding="8dp" />
-
-        <TextView
-            android:id="@+id/text_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
-            android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:text="@string/title_email" />
-
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_small"
-            android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/rectangle_input"
-            android:hint="@string/hint_email"
-            android:padding="8dp" />
-
-        <TextView
-            android:id="@+id/text_ktp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
-            android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:text="@string/title_ktp" />
-
-        <EditText
-            android:id="@+id/et_ktp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_small"
-            android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/rectangle_input"
-            android:hint="@string/hint_ktp"
-            android:padding="8dp" />
-
-        <TextView
-            android:id="@+id/text_kota"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
-            android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:text="@string/title_kota" />
-
-        <EditText
-            android:id="@+id/et_kota"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_small"
-            android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/rectangle_input"
-            android:hint="@string/hint_kota"
+            android:hint="***********"
             android:padding="8dp" />
 
     </LinearLayout>
@@ -123,7 +103,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/home_button"
         android:fontFamily="@font/nunito"
-        android:text="@string/btn_register"
+        android:text="Tambah Sensor"
         android:textColor="@android:color/white"
         android:textSize="@dimen/text_small"
         android:textStyle="bold" />

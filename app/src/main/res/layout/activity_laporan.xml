@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.codedirect.register.RegisterActivity">
+    tools:context="com.codedirect.Laporan.LaporanActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +18,7 @@
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
             android:padding="8dp"
-            android:text="@string/title_register"
+            android:text="Laporan"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_title"
@@ -28,74 +27,76 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/subtitle_register"
+            android:text="Isi form sesuai dengan jenis pelayanan"
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/text_username"
+            android:id="@+id/text_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:text="@string/title_username" />
+            android:text="Tipe" />
 
         <EditText
-            android:id="@+id/et_name"
+            android:id="@+id/et_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
-            android:hint="@string/hint_username"
+            android:hint="Kebakaran"
             android:padding="8dp" />
 
         <TextView
-            android:id="@+id/text_email"
+            android:id="@+id/text_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:text="@string/title_email" />
+            android:text="Tipe" />
 
         <EditText
-            android:id="@+id/et_email"
+            android:id="@+id/et_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
             android:hint="@string/hint_email"
+            android:lines="5"
+            android:gravity="top"
             android:padding="8dp" />
 
         <TextView
-            android:id="@+id/text_ktp"
+            android:id="@+id/text_proof"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:text="@string/title_ktp" />
+            android:text="Bukti" />
 
         <EditText
-            android:id="@+id/et_ktp"
+            android:id="@+id/et_proof"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
-            android:hint="@string/hint_ktp"
+            android:hint="123478265081"
             android:padding="8dp" />
 
         <TextView
             android:id="@+id/text_kota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
@@ -114,7 +115,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/submit_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_small"
@@ -123,7 +124,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/home_button"
         android:fontFamily="@font/nunito"
-        android:text="@string/btn_register"
+        android:text="Submit"
         android:textColor="@android:color/white"
         android:textSize="@dimen/text_small"
         android:textStyle="bold" />

@@ -10,4 +10,8 @@
     <color name="primaryTextColor">#ffffff</color>
     <color name="primaryLinkColor">#6AAE71</color>
     <color name="primaryRadioColor">#2B8B35</color>
+    <color name="black">#000</color>
+    <color name="selectednavIcon">#FFA700</color>
+    <color name="switchColorTrue">#B13333</color>
 </resources>
+
