@@ -1,4 +1,4 @@
-package com.codedirect.menu.sensor.detail
+    package com.codedirect.menu.sensor.detail
 
 
 import android.os.Bundle
@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.codedirect.model.DataModel
 
 import com.codedirect.trafficnetsecurity.R
+import kotlinx.android.synthetic.main.fragment_sensor.*
 import kotlinx.android.synthetic.main.fragment_sensors.*
+import kotlin.random.Random
 
-/**
+    /**
  * A simple [Fragment] subclass.
  */
 class SensorsFragment : Fragment() {
@@ -22,6 +24,8 @@ class SensorsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+//        title_fragment.text = "Semua Laporan CCTV Anda"
+//        subtitle_fragment.text = "Halaman ini menunjukkan semua kegiatan dan status dari kegiatan yang telah dilakukan"
         return inflater.inflate(R.layout.fragment_sensors, container, false)
     }
 
@@ -29,8 +33,14 @@ class SensorsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val dataItems = arrayListOf<DataModel?>()
-        for (i in 0 until 10)
-            dataItems.add(DataModel("","Pintu 1"))
+
+        val info = arrayListOf<String>("Aman", "Indikasi", "Bahaya")
+        val status = arrayListOf<String>("Online", "Offline")
+
+        for (ite in 0..10) {
+            dataItems.add(DataModel("", "Pintu " + ite, info[Random.nextInt(0,2)], status[Random.nextInt(0,1)]))
+        }
+
         val adapter = AdapterSensor(dataItems){}
 
         sensor_recycler.layoutManager = LinearLayoutManager(context)

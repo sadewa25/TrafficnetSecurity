@@ -22,7 +22,7 @@
             android:text="Home Status"
             android:fontFamily="@font/nunito"
             android:textStyle="bold"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_medium"
             android:layout_height="wrap_content"/>
         <Switch
             android:layout_width="0dp"
@@ -37,7 +37,6 @@
         mapbox:mapbox_cameraTargetLng="112.7906367"
         mapbox:mapbox_cameraZoom="10"
         mapbox:mapbox_cameraBearing="34.33"
-        mapbox:mapbox_cameraTilt="50.25"
         mapbox:mapbox_cameraZoomMax="12.41"
         mapbox:mapbox_cameraZoomMin="6"
         android:layout_below="@id/home_header"
@@ -45,6 +44,7 @@
         android:layout_height="match_parent" />
 
     <Button
+        android:id="@+id/btn_laporan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/home_button"
@@ -52,10 +52,9 @@
         android:layout_marginBottom="@dimen/margin_small"
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginRight="@dimen/margin_small"
-        android:text="Laporkan"
-        android:textSize="18sp"
+        android:text="LAPORKAN"
+        android:textSize="@dimen/text_small"
         android:fontFamily="@font/nunito"
-        android:textStyle="bold"
         android:textColor="@android:color/white"/>
 
 </RelativeLayout>

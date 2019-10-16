@@ -1,11 +1,13 @@
 package com.codedirect.menu
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.codedirect.Laporan.LaporanActivity
 
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.Style
@@ -37,6 +39,10 @@ class HomeFragment : Fragment() {
 
                 }
             })
+        }
+        btn_laporan.setOnClickListener{
+            val intent : Intent = Intent(getActivity(), LaporanActivity::class.java)
+            startActivity(intent)
         }
 
     }

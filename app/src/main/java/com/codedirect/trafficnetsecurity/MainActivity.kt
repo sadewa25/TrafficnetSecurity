@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import com.codedirect.menu.HomeFragment
 import com.codedirect.menu.ProfileFragment
 import com.codedirect.menu.sensor.SensorFragment
+import com.mapbox.mapboxsdk.maps.MapView
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -34,8 +36,8 @@ class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
+        val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),10)
@@ -44,6 +46,7 @@ class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSe
         navView.setOnNavigationItemSelectedListener(this)
         changeFragment(HomeFragment(),R.id.frame_main)
     }
+
 
     fun changeFragment(fragment:Fragment, id:Int){
         supportFragmentManager.beginTransaction().replace(id,fragment).commit()

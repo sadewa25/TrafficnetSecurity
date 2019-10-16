@@ -1,6 +1,6 @@
 package com.codedirect.model
 
-data class SensorModel(
+data class CctvModel(
     val id : Int,
     val ssid : String,
     val pass : String,

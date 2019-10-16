@@ -11,6 +11,8 @@ import com.codedirect.model.DataModel
 
 import com.codedirect.trafficnetsecurity.R
 import kotlinx.android.synthetic.main.fragment_cctv.*
+import kotlinx.android.synthetic.main.fragment_sensor.*
+import kotlin.random.Random
 
 class CCTVFragment : Fragment() {
 
@@ -19,6 +21,8 @@ class CCTVFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+//        title_fragment.text = "Sensor Pintu Rumah Anda"
+//        subtitle_fragment.text = "Halaman ini menunjukkan semua status sensor pintu di rumah anda"
         return inflater.inflate(R.layout.fragment_cctv, container, false)
     }
 
@@ -26,8 +30,13 @@ class CCTVFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val dataItems = arrayListOf<DataModel?>()
-        for (i in 0 until 10)
-            dataItems.add(DataModel("","CCTV Halaman"))
+
+        val info = arrayListOf<String>("Aman", "Indikasi", "Bahaya")
+        val status = arrayListOf<String>("Online", "Offline")
+
+        for (i in 0 until 10){
+            dataItems.add(DataModel("","CCTV Halaman", info[Random.nextInt(0,2)], status[Random.nextInt(0,1)]))
+        }
         val adapter = AdapterSensor(dataItems){}
 
         cctv_recycler.layoutManager = LinearLayoutManager(context)
