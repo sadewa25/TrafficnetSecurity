@@ -1,8 +1,8 @@
 package com.codedirect.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.codedirect.register.RegisterActivity
 import com.codedirect.trafficnetsecurity.MainActivity
 import com.codedirect.trafficnetsecurity.R
@@ -14,12 +14,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        login_btn.setOnClickListener{
+        login_btn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        textRegister.setOnClickListener{
+        textRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }

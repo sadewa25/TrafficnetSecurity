@@ -3,12 +3,11 @@ package com.codedirect.menu
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.codedirect.Laporan.LaporanActivity
-
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.Style
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -25,8 +24,15 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        Mapbox.getInstance(context!!, "pk.eyJ1Ijoic2FkZXdhd2ljYWsiLCJhIjoiY2pvcHE2Z21jMTFyaTN2bHc4YmxyZzRueSJ9.5qyO5GZ9ZSVLSHScuYmJTQ")
-        return inflater.inflate(com.codedirect.trafficnetsecurity.R.layout.fragment_home, container, false)
+        Mapbox.getInstance(
+            context!!,
+            "pk.eyJ1Ijoic2FkZXdhd2ljYWsiLCJhIjoiY2pvcHE2Z21jMTFyaTN2bHc4YmxyZzRueSJ9.5qyO5GZ9ZSVLSHScuYmJTQ"
+        )
+        return inflater.inflate(
+            com.codedirect.trafficnetsecurity.R.layout.fragment_home,
+            container,
+            false
+        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,8 +46,8 @@ class HomeFragment : Fragment() {
                 }
             })
         }
-        btn_laporan.setOnClickListener{
-            val intent : Intent = Intent(getActivity(), LaporanActivity::class.java)
+        btn_laporan.setOnClickListener {
+            val intent: Intent = Intent(activity, LaporanActivity::class.java)
             startActivity(intent)
         }
 

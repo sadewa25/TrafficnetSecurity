@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="5dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/margin_supersmall"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/item_sensor_img"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:src="@drawable/ic_home_black_24dp"
-            />
+            android:src="@drawable/ic_home_black_24dp" />
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_supersmall"
+            android:layout_marginTop="@dimen/margin_supersmall"
             android:layout_toRightOf="@+id/item_sensor_img"
             android:gravity="center_vertical"
-            android:layout_marginLeft="@dimen/margin_supersmall"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="@dimen/margin_supersmall"
-            android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/item_sensor_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Infra Merah 1"
                 android:fontFamily="@font/nunito_sans"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_small" />
+                android:text="Infra Merah 1"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Aman"
-                android:textColor="@android:color/holo_green_light"
                 android:fontFamily="@font/nunito"
-                />
+                android:text="Aman"
+                android:textColor="@android:color/holo_green_light" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
-            android:text="Online"
-            android:textColor="@android:color/holo_green_dark"
-            android:fontFamily="@font/nunito"
-            android:layout_gravity="center_vertical"
-            android:textAlignment="textEnd"
-            android:textStyle="bold"
-            android:textSize="@dimen/text_small"
-            android:layout_marginRight="@dimen/margin_small"
-            android:layout_marginLeft="@dimen/margin_supersmall"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_supersmall"
+            android:layout_marginRight="@dimen/margin_small"
+            android:fontFamily="@font/nunito"
+            android:text="Online"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
             tools:ignore="RtlCompat" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

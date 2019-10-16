@@ -26,12 +26,19 @@
 
     <string name="subtitle_register">Isi form sesuai dengan identitas anda</string>
     <string name="subtitle_register_sensor">Tambah sensor di akun anda</string>
+    <string name="btn_register">Save Profile</string>
 
     <string name="hint_username">Sangsakawira</string>
     <string name="hint_email">sangsakawira@gmail.com</string>
     <string name="hint_ktp">356473829381889</string>
     <string name="hint_kota">Kota Surabaya</string>
 
-    <string name="btn_register">Save Profile</string>
+    <string name="main_title_cctv">Semua Laporan CCTV Anda</string>
+    <string name="subtitle_cctv">Halaman ini menunjukkan semua kegiatan dan status dari kegiatan yang telah dilakukan</string>
+    <string name="btn_cctv">Tambah CCTV</string>
+
+    <string name="main_title_sensor">Sensor Pintu Rumah Anda</string>
+    <string name="subtitle_sensor">Halaman ini menunjukkan semua status sensor pintu di rumah anda</string>
+    <string name="btn_sensor">Tambah Sensor</string>
 
 </resources>

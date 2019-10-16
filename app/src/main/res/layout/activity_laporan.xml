@@ -1,129 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small"
-                    android:fontFamily="@font/nunito"
-                    android:padding="8dp"
-                    android:text="Laporan"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/text_title"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:fontFamily="@font/nunito"
+            android:padding="8dp"
+            android:text="Laporan"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Isi form sesuai dengan jenis pelayanan"
-                    android:textAlignment="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isi form sesuai dengan jenis pelayanan"
+            android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/text_type"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_medium"
-                    android:fontFamily="@font/nunito"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:text="Tipe" />
+        <TextView
+            android:id="@+id/text_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/nunito"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Tipe" />
 
-                <EditText
-                    android:id="@+id/et_type"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_small"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:background="@drawable/rectangle_input"
-                    android:hint="Kebakaran"
-                    android:padding="8dp" />
+        <EditText
+            android:id="@+id/et_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/rectangle_input"
+            android:hint="Kebakaran"
+            android:padding="8dp" />
 
-                <TextView
-                    android:id="@+id/text_info"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_medium"
-                    android:fontFamily="@font/nunito"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:text="Keterangan" />
+        <TextView
+            android:id="@+id/text_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/nunito"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Keterangan" />
 
-                <EditText
-                    android:id="@+id/et_info"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_small"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:background="@drawable/rectangle_input"
-                    android:hint="@string/hint_email"
-                    android:lines="5"
-                    android:gravity="top"
-                    android:padding="8dp" />
+        <EditText
+            android:id="@+id/et_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/rectangle_input"
+            android:gravity="top"
+            android:hint="@string/hint_email"
+            android:lines="5"
+            android:padding="8dp" />
 
-                <TextView
-                    android:id="@+id/text_proof"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_medium"
-                    android:fontFamily="@font/nunito"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:text="Bukti" />
+        <TextView
+            android:id="@+id/text_proof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/nunito"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Bukti" />
 
-                <EditText
-                    android:id="@+id/et_proof"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_small"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:background="@drawable/rectangle_input"
-                    android:hint="123478265081"
-                    android:padding="8dp" />
+        <EditText
+            android:id="@+id/et_proof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/rectangle_input"
+            android:hint="123478265081"
+            android:padding="8dp" />
 
-                <TextView
-                    android:id="@+id/text_kota"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_medium"
-                    android:fontFamily="@font/nunito"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    android:text="@string/title_kota" />
+        <TextView
+            android:id="@+id/text_kota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/nunito"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/title_kota" />
 
-                <EditText
-                    android:id="@+id/et_kota"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_small"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:background="@drawable/rectangle_input"
-                    android:hint="@string/hint_kota"
-                    android:padding="8dp" />
+        <EditText
+            android:id="@+id/et_kota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/rectangle_input"
+            android:hint="@string/hint_kota"
+            android:padding="8dp" />
 
-                <Button
-                    android:id="@+id/submit_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_small"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:layout_alignParentBottom="true"
-                    android:background="@drawable/home_button"
-                    android:fontFamily="@font/nunito"
-                    android:text="Submit"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/text_small"
-                    android:textStyle="bold" />
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/home_button"
+            android:fontFamily="@font/nunito"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
 
-            </LinearLayout>
+    </LinearLayout>
 
-    </ScrollView>
+</ScrollView>
