@@ -83,7 +83,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_small"
         android:layout_marginRight="@dimen/margin_small"
-        android:background="@drawable/login_button"
+        android:background="@drawable/home_button"
         android:fontFamily="@font/nunito_sans"
         android:text="Save Profile"
         android:textColor="@android:color/white"
