@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
-            android:padding="8dp"
+            android:padding="@dimen/margin_supersmall"
             android:text="@string/title_register_sensor"
             android:textAlignment="center"
             android:textColor="@android:color/black"
@@ -36,8 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:padding="@dimen/margin_supersmall"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
             android:text="ID Sensor" />
 
         <EditText
@@ -48,7 +49,7 @@
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
             android:hint="345323432"
-            android:padding="8dp" />
+            android:padding="@dimen/margin_supersmall" />
 
         <TextView
             android:id="@+id/text_ssid"
@@ -56,8 +57,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:padding="@dimen/margin_supersmall"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
             android:text="SSID" />
 
         <EditText
@@ -68,7 +70,7 @@
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
             android:hint="WiFi-Kantor-Safevision"
-            android:padding="8dp" />
+            android:padding="@dimen/margin_supersmall" />
 
         <TextView
             android:id="@+id/text_username"
@@ -76,8 +78,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:padding="@dimen/margin_supersmall"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_username" />
 
         <EditText
@@ -87,8 +90,9 @@
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
-            android:hint="***********"
-            android:padding="8dp" />
+            android:hint="123456789"
+            android:inputType="textPassword"
+            android:padding="@dimen/margin_supersmall" />
 
     </LinearLayout>
 

@@ -41,4 +41,6 @@
     <string name="subtitle_sensor">Halaman ini menunjukkan semua status sensor pintu di rumah anda</string>
     <string name="btn_sensor">Tambah Sensor</string>
 
+    <string name="mapbox_api_key">pk.eyJ1Ijoic2FkZXdhd2ljYWsiLCJhIjoiY2pvcHE2Z21jMTFyaTN2bHc4YmxyZzRueSJ9.5qyO5GZ9ZSVLSHScuYmJTQ</string>
+
 </resources>

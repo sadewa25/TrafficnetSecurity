@@ -17,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
         login_btn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         textRegister.setOnClickListener {

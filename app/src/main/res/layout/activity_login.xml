@@ -11,8 +11,8 @@
         android:id="@+id/login_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_large"
-        android:padding="30dp"
+        android:layout_marginTop="@dimen/margin_superlarge"
+        android:padding="@dimen/margin_supersmall"
         android:src="@drawable/logo_safevision" />
 
     <EditText
@@ -42,8 +42,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small">
 
         <RadioButton
             android:id="@+id/radio_remember"
@@ -61,7 +61,7 @@
             android:layout_centerVertical="true"
             android:fontFamily="@font/nunito"
             android:text="@string/title_forgot_pass"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_small" />
 
     </RelativeLayout>
 
@@ -87,7 +87,7 @@
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/margin_supersmall">
 
         <TextView
             android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_superlarge"
         android:text="@string/title_another_login"
         android:textAlignment="center"
         android:textSize="@dimen/text_small"

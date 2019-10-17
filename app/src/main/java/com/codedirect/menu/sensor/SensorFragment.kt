@@ -34,6 +34,7 @@ class SensorFragment : Fragment() {
 
         btn_add.setOnClickListener {
             startActivity(starterIntent)
+
         }
 
         setupViewPager(sensor_viewpager, fragmentManager)

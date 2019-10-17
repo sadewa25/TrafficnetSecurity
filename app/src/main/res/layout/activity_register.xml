@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
-            android:padding="8dp"
+            android:padding="@dimen/margin_supersmall"
             android:text="@string/title_register"
             android:textAlignment="center"
             android:textColor="@android:color/black"
@@ -33,12 +32,13 @@
 
         <TextView
             android:id="@+id/text_username"
+            android:padding="@dimen/margin_supersmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_username" />
 
         <EditText
@@ -49,16 +49,17 @@
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
             android:hint="@string/hint_username"
-            android:padding="8dp" />
+            android:padding="@dimen/margin_supersmall" />
 
         <TextView
             android:id="@+id/text_email"
+            android:padding="@dimen/margin_supersmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_email" />
 
         <EditText
@@ -69,16 +70,17 @@
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
             android:hint="@string/hint_email"
-            android:padding="8dp" />
+            android:padding="@dimen/margin_supersmall" />
 
         <TextView
             android:id="@+id/text_ktp"
+            android:padding="@dimen/margin_supersmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_ktp" />
 
         <EditText
@@ -89,16 +91,17 @@
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
             android:hint="@string/hint_ktp"
-            android:padding="8dp" />
+            android:padding="@dimen/margin_supersmall" />
 
         <TextView
             android:id="@+id/text_kota"
+            android:padding="@dimen/margin_supersmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_kota" />
 
         <EditText
@@ -109,7 +112,7 @@
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/rectangle_input"
             android:hint="@string/hint_kota"
-            android:padding="8dp" />
+            android:padding="@dimen/margin_supersmall" />
 
     </LinearLayout>
 
@@ -117,10 +120,10 @@
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/margin_small"
-        android:layout_alignParentBottom="true"
         android:background="@drawable/home_button"
         android:fontFamily="@font/nunito"
         android:text="@string/btn_register"

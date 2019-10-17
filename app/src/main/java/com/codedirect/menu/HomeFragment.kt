@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.codedirect.Laporan.LaporanActivity
+import com.codedirect.trafficnetsecurity.R
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.Style
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -26,7 +27,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         Mapbox.getInstance(
             context!!,
-            "pk.eyJ1Ijoic2FkZXdhd2ljYWsiLCJhIjoiY2pvcHE2Z21jMTFyaTN2bHc4YmxyZzRueSJ9.5qyO5GZ9ZSVLSHScuYmJTQ"
+            getString(R.string.mapbox_api_key)
         )
         return inflater.inflate(
             com.codedirect.trafficnetsecurity.R.layout.fragment_home,
