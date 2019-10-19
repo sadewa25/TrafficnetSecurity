@@ -5,7 +5,7 @@
     tools:context="com.codedirect.menu.sensor.detail.CCTVFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cctv_recycler"
+        android:id="@+id/rv_cctv"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

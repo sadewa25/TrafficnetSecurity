@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/coordinatorLayout"
+    android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+        android:id="@+id/appbar_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/text_primary">
 
 
         <TextView
-            android:id="@+id/title_fragment"
+            android:id="@+id/tv_main_sensor_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
@@ -27,7 +27,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/subtitle_fragment"
+            android:id="@+id/tv_main_sensor_subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_small"
@@ -36,17 +36,17 @@
 
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/sensor_tabs"
+            android:id="@+id/tabs_sensor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="fill" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/sensor_viewpager"
+        android:id="@+id/vp_sensor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/appBarLayout" />
+        android:layout_below="@+id/appbar_layout" />
 
     <Button
         android:id="@+id/btn_add"

@@ -8,7 +8,7 @@
     tools:context="com.codedirect.login.LoginActivity">
 
     <ImageView
-        android:id="@+id/login_logo"
+        android:id="@+id/iv_login_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_superlarge"
@@ -16,7 +16,7 @@
         android:src="@drawable/logo_safevision" />
 
     <EditText
-        android:id="@+id/login_email"
+        android:id="@+id/et_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_small"
@@ -28,7 +28,7 @@
         android:padding="@dimen/margin_supersmall" />
 
     <EditText
-        android:id="@+id/login_password"
+        android:id="@+id/et_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_small"
@@ -46,7 +46,7 @@
         android:layout_marginRight="@dimen/margin_small">
 
         <RadioButton
-            android:id="@+id/radio_remember"
+            android:id="@+id/rb_remember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@color/radio_primary"
@@ -66,7 +66,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_small"
@@ -98,7 +98,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textRegister"
+            android:id="@+id/tv_link_to_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_supersmall"

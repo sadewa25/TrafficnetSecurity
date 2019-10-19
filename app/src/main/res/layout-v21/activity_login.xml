@@ -8,15 +8,15 @@
     tools:context="com.codedirect.login.LoginActivity">
 
     <ImageView
-        android:id="@+id/login_logo"
+        android:id="@+id/iv_login_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
-        android:padding="30dp"
+        android:padding="@dimen/default_button_size"
         android:src="@drawable/logo_safevision" />
 
     <EditText
-        android:id="@+id/login_email"
+        android:id="@+id/et_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_small"
@@ -28,7 +28,7 @@
         android:padding="@dimen/margin_supersmall" />
 
     <EditText
-        android:id="@+id/login_password"
+        android:id="@+id/et_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_small"
@@ -42,11 +42,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small">
 
         <RadioButton
-            android:id="@+id/radio_remember"
+            android:id="@+id/rb_remember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito"
@@ -60,13 +60,13 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:fontFamily="@font/nunito"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_supersmall"
             android:text="@string/title_forgot_pass" />
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_small"
@@ -87,7 +87,7 @@
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_gravity="center"
         android:gravity="center"
-        android:padding="10dp">
+        android:padding="@dimen/margin_supersmall">
 
         <TextView
             android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textRegister"
+            android:id="@+id/tv_link_to_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito"
@@ -125,7 +125,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="@dimen/margin_supersmall">
 
         <Button
             android:layout_width="@dimen/default_button_size"

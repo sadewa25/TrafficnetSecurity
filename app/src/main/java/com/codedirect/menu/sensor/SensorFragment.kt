@@ -37,9 +37,9 @@ class SensorFragment : Fragment() {
 
         }
 
-        setupViewPager(sensor_viewpager, fragmentManager)
-        sensor_tabs.setupWithViewPager(sensor_viewpager)
-        sensor_viewpager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        setupViewPager(vp_sensor, fragmentManager)
+        tabs_sensor.setupWithViewPager(vp_sensor)
+        vp_sensor.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
             }
 
@@ -52,13 +52,13 @@ class SensorFragment : Fragment() {
 
             override fun onPageSelected(position: Int) {
                 if (position == 0) {
-                    title_fragment.text = getString(R.string.main_title_sensor)
-                    subtitle_fragment.text = getString(R.string.subtitle_sensor)
+                    tv_main_sensor_title.text = getString(R.string.main_title_sensor)
+                    tv_main_sensor_subtitle.text = getString(R.string.subtitle_sensor)
                     btn_add.text = getString(R.string.btn_sensor)
                     starterIntent = Intent(activity, RegisterSensorActivity::class.java)
                 } else {
-                    title_fragment.text = getString(R.string.main_title_cctv)
-                    subtitle_fragment.text = getString(R.string.subtitle_cctv)
+                    tv_main_sensor_title.text = getString(R.string.main_title_cctv)
+                    tv_main_sensor_subtitle.text = getString(R.string.subtitle_cctv)
                     btn_add.text = getString(R.string.btn_cctv)
 //                   starterIntent = Intent(activity, RegisterCctvActivity::class.java)
                 }

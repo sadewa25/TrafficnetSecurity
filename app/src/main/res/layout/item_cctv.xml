@@ -15,7 +15,7 @@
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/item_cctv_img"
+            android:id="@+id/iv_cctv_thumbnail"
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:src="@drawable/ic_home_black_24dp" />
@@ -26,12 +26,12 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/margin_supersmall"
             android:layout_marginTop="@dimen/margin_supersmall"
-            android:layout_toRightOf="@+id/item_cctv_img"
+            android:layout_toRightOf="@+id/iv_cctv_thumbnail"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/item_sensor_title"
+                android:id="@+id/tv_main_sensor_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_sans"
@@ -40,6 +40,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tv_cctv_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
@@ -48,6 +49,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_cctv_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

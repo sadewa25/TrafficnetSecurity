@@ -17,7 +17,7 @@
         app:itemIconTint="@drawable/state_list"
         app:itemTextColor="@drawable/state_list"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/menu_nav_bottom" />
 
     <FrameLayout
         android:id="@+id/frame_main"

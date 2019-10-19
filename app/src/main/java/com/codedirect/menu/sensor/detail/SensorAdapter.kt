@@ -9,26 +9,26 @@ import com.codedirect.model.DataModel
 import com.codedirect.trafficnetsecurity.R
 import org.jetbrains.anko.find
 
-class AdapterSensor(
+class SensorAdapter(
     val dataItems: ArrayList<DataModel?>?,
     private val listener: (DataModel?) -> Unit
-) : RecyclerView.Adapter<AdapterSensor.itemHolder>() {
+) : RecyclerView.Adapter<SensorAdapter.SensorVH>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, position: Int): itemHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, position: Int): SensorVH {
         val view: View =
             LayoutInflater.from(parent.context).inflate(R.layout.item_sensor, parent, false)
-        return itemHolder(view)
+        return SensorVH(view)
     }
 
     override fun getItemCount(): Int = dataItems!!.size
 
-    override fun onBindViewHolder(itemholder: itemHolder, position: Int) {
+    override fun onBindViewHolder(itemholder: SensorVH, position: Int) {
         itemholder.bind(dataItems?.get(position), listener)
     }
 
-    class itemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class SensorVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val textItemTitle = itemView.find<TextView>(R.id.item_sensor_title)
+        val textItemTitle = itemView.find<TextView>(R.id.tv_main_sensor_title)
 
         fun bind(resultItemAPI: DataModel?, listener: (DataModel?) -> Unit) {
 
