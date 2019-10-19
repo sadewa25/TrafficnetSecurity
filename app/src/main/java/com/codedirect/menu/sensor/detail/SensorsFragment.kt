@@ -44,7 +44,7 @@ class SensorsFragment : Fragment() {
             )
         }
 
-        val adapter = SensorAdapter(dataItems) {}
+        val adapter = SensorsAdapter(dataItems) {}
 
         rv_sensor.layoutManager = LinearLayoutManager(context)
         rv_sensor.adapter = adapter

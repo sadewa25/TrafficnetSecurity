@@ -40,7 +40,7 @@ class CCTVFragment : Fragment() {
                 )
             )
         }
-        val adapter = SensorAdapter(dataItems) {}
+        val adapter = SensorsAdapter(dataItems) {}
 
         rv_cctv.layoutManager = LinearLayoutManager(context)
         rv_cctv.adapter = adapter

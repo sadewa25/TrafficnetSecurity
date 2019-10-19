@@ -9,10 +9,10 @@ import com.codedirect.model.DataModel
 import com.codedirect.trafficnetsecurity.R
 import org.jetbrains.anko.find
 
-class SensorAdapter(
+class SensorsAdapter(
     val dataItems: ArrayList<DataModel?>?,
     private val listener: (DataModel?) -> Unit
-) : RecyclerView.Adapter<SensorAdapter.SensorVH>() {
+) : RecyclerView.Adapter<SensorsAdapter.SensorVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): SensorVH {
         val view: View =
@@ -28,7 +28,7 @@ class SensorAdapter(
 
     class SensorVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val textItemTitle = itemView.find<TextView>(R.id.tv_main_sensor_title)
+        val textItemTitle = itemView.find<TextView>(R.id.tv_sensor_title)
 
         fun bind(resultItemAPI: DataModel?, listener: (DataModel?) -> Unit) {
 
