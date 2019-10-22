@@ -27,10 +27,18 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${lib.kotlin}"
+    implementation "androidx.appcompat:appcompat:${lib.androidx_appcompat}"
+    implementation "androidx.core:core-ktx:${lib.androidx_core}"
+
+    implementation "com.amitshekhar.android:android-networking:${lib.android_networking}"
+    implementation "com.google.code.gson:gson:${lib.google_gson}"
+    implementation "javax.annotation:javax.annotation-api:${lib.javax_annotation}"
+
+    implementation "org.koin:koin-android:${lib.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${lib.koin}"
+
+    testImplementation "junit:junit:${lib.test_junit}"
+    androidTestImplementation "androidx.test:runner:${lib.test_runner}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${lib.test_espresso}"
 }
