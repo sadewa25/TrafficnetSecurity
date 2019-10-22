@@ -2,15 +2,15 @@ package com.codedirect.menu.sensor.detail
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.codedirect.model.DataModel
-
 import com.codedirect.trafficnetsecurity.R
 import kotlinx.android.synthetic.main.fragment_cctv.*
+import kotlin.random.Random
 
 class CCTVFragment : Fragment() {
 
@@ -26,12 +26,24 @@ class CCTVFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val dataItems = arrayListOf<DataModel?>()
-        for (i in 0 until 10)
-            dataItems.add(DataModel("","CCTV Halaman"))
-        val adapter = AdapterSensor(dataItems){}
 
-        cctv_recycler.layoutManager = LinearLayoutManager(context)
-        cctv_recycler.adapter = adapter
+        val info = arrayListOf<String>("Aman", "Indikasi", "Bahaya")
+        val status = arrayListOf<String>("Online", "Offline")
+
+        for (i in 0 until 10) {
+            dataItems.add(
+                DataModel(
+                    "",
+                    "CCTV Halaman",
+                    info[Random.nextInt(0, 2)],
+                    status[Random.nextInt(0, 1)]
+                )
+            )
+        }
+        val adapter = SensorsAdapter(dataItems) {}
+
+        rv_cctv.layoutManager = LinearLayoutManager(context)
+        rv_cctv.adapter = adapter
     }
 
 
