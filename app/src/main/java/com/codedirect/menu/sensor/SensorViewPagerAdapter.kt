@@ -4,10 +4,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 
-class SensorViewPagerAdapter(fm: FragmentManager?): FragmentStatePagerAdapter(fm!!) {
+class SensorViewPagerAdapter(fm: FragmentManager?) : FragmentStatePagerAdapter(fm!!) {
 
-    private var dataFragment:ArrayList<Fragment> = ArrayList()
-    private var dataFragmentTitle:ArrayList<String> = ArrayList()
+    private var dataFragment: ArrayList<Fragment> = ArrayList()
+    private var dataFragmentTitle: ArrayList<String> = ArrayList()
 
     override fun getItem(position: Int): Fragment {
         return dataFragment.get(position)
@@ -17,7 +17,7 @@ class SensorViewPagerAdapter(fm: FragmentManager?): FragmentStatePagerAdapter(fm
         return dataFragment.size
     }
 
-    fun addFragment(fragment: Fragment, string: String){
+    fun addFragment(fragment: Fragment, string: String) {
         dataFragment.add(fragment)
         dataFragmentTitle.add(string)
     }

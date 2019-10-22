@@ -1,27 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
+
+
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
+        android:id="@+id/appbar_layout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/sensor_tabs"
+        android:background="@color/text_primary">
+
+
+        <TextView
+            android:id="@+id/tv_main_sensor_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabMode="fixed"
             android:layout_marginTop="@dimen/margin_small"
-            app:tabGravity="fill"/>
+            android:fontFamily="@font/nunito"
+            android:padding="8dp"
+            android:text="Sensor Pintu Rumah Anda"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_main_sensor_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="Halaman ini menunjukkan semua status sensor pintu di rumah anda"
+            android:textAlignment="center" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/sensor_viewpager"
+        android:id="@+id/vp_sensor"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar_layout" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@drawable/home_button"
+        android:fontFamily="@font/nunito"
+        android:text="Tambah Sensor"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_small" />
+
+</RelativeLayout>
