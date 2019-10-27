@@ -17,4 +17,6 @@
     <dimen name="text_medium">20sp</dimen>
     <dimen name="text_small">16sp</dimen>
     <dimen name="text_supersmall">14sp</dimen>
+
+    <dimen name="border_default_size">4dp</dimen>
 </resources>

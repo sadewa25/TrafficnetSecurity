@@ -31,11 +31,11 @@
 
         <TextView
             android:id="@+id/tv_username"
-            android:padding="@dimen/margin_supersmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/nunito"
+            android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_username" />
@@ -46,17 +46,17 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/rectangle_input"
+            android:background="@drawable/input_rect"
             android:hint="@string/hint_username"
             android:padding="@dimen/margin_supersmall" />
 
         <TextView
             android:id="@+id/tv_email"
-            android:padding="@dimen/margin_supersmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
+            android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_email" />
@@ -67,17 +67,17 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/rectangle_input"
+            android:background="@drawable/input_rect"
             android:hint="@string/hint_email"
             android:padding="@dimen/margin_supersmall" />
 
         <TextView
             android:id="@+id/tv_ktp"
-            android:padding="@dimen/margin_supersmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
+            android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_ktp" />
@@ -88,17 +88,17 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/rectangle_input"
+            android:background="@drawable/input_rect"
             android:hint="@string/hint_ktp"
             android:padding="@dimen/margin_supersmall" />
 
         <TextView
             android:id="@+id/tv_kota"
-            android:padding="@dimen/margin_supersmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
+            android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
             android:text="@string/title_kota" />
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/rectangle_input"
+            android:background="@drawable/input_rect"
             android:hint="@string/hint_kota"
             android:padding="@dimen/margin_supersmall" />
 
@@ -123,7 +123,8 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/margin_small"
-        android:background="@drawable/home_button"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@drawable/btn_rounded"
         android:fontFamily="@font/nunito"
         android:text="@string/btn_register"
         android:textColor="@android:color/white"

@@ -11,8 +11,8 @@
         android:id="@+id/iv_login_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:padding="@dimen/default_button_size"
+        android:layout_marginTop="@dimen/margin_superlarge"
+        android:padding="@dimen/margin_supersmall"
         android:src="@drawable/logo_safevision" />
 
     <EditText
@@ -22,7 +22,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_small"
         android:layout_marginRight="@dimen/margin_small"
-        android:background="@drawable/rectangle_input"
+        android:background="@drawable/input_rect"
         android:fontFamily="@font/nunito"
         android:hint="@string/title_email"
         android:padding="@dimen/margin_supersmall" />
@@ -34,7 +34,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_supersmall"
         android:layout_marginRight="@dimen/margin_small"
-        android:background="@drawable/rectangle_input"
+        android:background="@drawable/input_rect"
         android:fontFamily="@font/nunito"
         android:hint="@string/title_password"
         android:padding="@dimen/margin_supersmall" />
@@ -49,8 +49,8 @@
             android:id="@+id/rb_remember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito"
             android:buttonTint="@color/radio_primary"
+            android:fontFamily="@font/nunito"
             android:text="@string/title_remember" />
 
         <TextView
@@ -60,8 +60,8 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:fontFamily="@font/nunito"
-            android:textSize="@dimen/text_supersmall"
-            android:text="@string/title_forgot_pass" />
+            android:text="@string/title_forgot_pass"
+            android:textSize="@dimen/text_small" />
 
     </RelativeLayout>
 
@@ -72,7 +72,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_supersmall"
         android:layout_marginRight="@dimen/margin_small"
-        android:background="@drawable/home_button"
+        android:background="@drawable/btn_rounded"
         android:fontFamily="@font/nunito"
         android:text="@string/title_login"
         android:textColor="@android:color/white"
@@ -82,11 +82,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_gravity="center"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_gravity="center"
         android:gravity="center"
+        android:orientation="horizontal"
         android:padding="@dimen/margin_supersmall">
 
         <TextView
@@ -101,8 +101,8 @@
             android:id="@+id/tv_link_to_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito"
             android:layout_marginStart="@dimen/margin_supersmall"
+            android:fontFamily="@font/nunito"
             android:text="@string/title_sign_up"
             android:textColor="@color/link_primary"
             android:textSize="@dimen/text_supersmall"
@@ -113,33 +113,34 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_small"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/margin_superlarge"
+        android:text="@string/title_another_login"
         android:textAlignment="center"
-        android:text="@string/title_another_login" />
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="@dimen/margin_supersmall">
+        android:orientation="horizontal">
 
         <Button
             android:layout_width="@dimen/default_button_size"
             android:layout_height="@dimen/default_button_size"
-            android:background="@drawable/login_google"/>
+            android:background="@drawable/login_google" />
+
         <Button
             android:layout_width="@dimen/default_button_size"
             android:layout_height="@dimen/default_button_size"
             android:layout_margin="@dimen/default_btn_padding"
-            android:background="@drawable/login_facebook"/>
+            android:background="@drawable/login_facebook" />
+
         <Button
             android:layout_width="@dimen/default_button_size"
             android:layout_height="@dimen/default_button_size"
-            android:background="@drawable/login_twitter"/>
+            android:background="@drawable/login_twitter" />
 
     </LinearLayout>
 

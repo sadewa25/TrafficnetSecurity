@@ -11,5 +11,6 @@
     <color name="black_primary">#000</color>
     <color name="nav_icon_selected">#FFA700</color>
     <color name="switch_true">#B13333</color>
+    <color name="border_default">#E9E9E9</color>
 </resources>
 
