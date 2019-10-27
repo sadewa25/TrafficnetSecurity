@@ -1,4 +1,4 @@
-package com.codedirect.model
+package com.codedirect.trafficnetsecurity.model
 
 import java.math.BigInteger
 

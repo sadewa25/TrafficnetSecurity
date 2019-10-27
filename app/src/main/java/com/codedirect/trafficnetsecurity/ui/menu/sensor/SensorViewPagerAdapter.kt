@@ -1,4 +1,4 @@
-package com.codedirect.menu.sensor
+package com.codedirect.trafficnetsecurity.ui.menu.sensor
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

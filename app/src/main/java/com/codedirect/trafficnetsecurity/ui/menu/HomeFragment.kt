@@ -1,4 +1,4 @@
-package com.codedirect.menu
+package com.codedirect.trafficnetsecurity.ui.menu
 
 
 import android.content.Intent
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.codedirect.Laporan.LaporanActivity
+import com.codedirect.trafficnetsecurity.ui.report.ReportActivity
 import com.codedirect.trafficnetsecurity.R
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.Style
@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
             })
         }
         btn_laporan.setOnClickListener {
-            val intent: Intent = Intent(activity, LaporanActivity::class.java)
+            val intent: Intent = Intent(activity, ReportActivity::class.java)
             startActivity(intent)
         }
 

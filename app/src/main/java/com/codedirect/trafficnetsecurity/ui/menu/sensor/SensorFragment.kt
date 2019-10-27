@@ -1,4 +1,4 @@
-package com.codedirect.menu.sensor
+package com.codedirect.trafficnetsecurity.ui.menu.sensor
 
 
 import android.content.Intent
@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.viewpager.widget.ViewPager
-import com.codedirect.menu.RegisterSensorActivity
-import com.codedirect.menu.sensor.detail.CCTVFragment
-import com.codedirect.menu.sensor.detail.SensorsFragment
+import com.codedirect.trafficnetsecurity.ui.menu.RegisterSensorActivity
+import com.codedirect.trafficnetsecurity.ui.menu.sensor.detail.CCTVFragment
+import com.codedirect.trafficnetsecurity.ui.menu.sensor.detail.SensorsFragment
 import com.codedirect.trafficnetsecurity.R
 import kotlinx.android.synthetic.main.fragment_sensor.*
 

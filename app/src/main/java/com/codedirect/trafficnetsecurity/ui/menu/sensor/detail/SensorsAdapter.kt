@@ -1,11 +1,11 @@
-package com.codedirect.menu.sensor.detail
+package com.codedirect.trafficnetsecurity.ui.menu.sensor.detail
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.codedirect.model.DataModel
+import com.codedirect.trafficnetsecurity.model.DataModel
 import com.codedirect.trafficnetsecurity.R
 import org.jetbrains.anko.find
 

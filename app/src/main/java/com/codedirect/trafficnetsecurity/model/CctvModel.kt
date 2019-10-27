@@ -1,4 +1,4 @@
-package com.codedirect.model
+package com.codedirect.trafficnetsecurity.model
 
 data class CctvModel(
     val id : Int,

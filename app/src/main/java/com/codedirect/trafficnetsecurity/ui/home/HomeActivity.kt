@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity
+package com.codedirect.trafficnetsecurity.ui.home
 
 import android.Manifest
 import android.os.Build
@@ -6,12 +6,13 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.codedirect.menu.HomeFragment
-import com.codedirect.menu.ProfileFragment
-import com.codedirect.menu.sensor.SensorFragment
+import com.codedirect.trafficnetsecurity.R
+import com.codedirect.trafficnetsecurity.ui.menu.HomeFragment
+import com.codedirect.trafficnetsecurity.ui.menu.ProfileFragment
+import com.codedirect.trafficnetsecurity.ui.menu.sensor.SensorFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     override fun onNavigationItemSelected(menu: MenuItem): Boolean {
         when (menu.itemId) {

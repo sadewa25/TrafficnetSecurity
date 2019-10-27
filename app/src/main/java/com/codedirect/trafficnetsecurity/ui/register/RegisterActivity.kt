@@ -1,13 +1,13 @@
-package com.codedirect.menu
+package com.codedirect.trafficnetsecurity.ui.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.codedirect.trafficnetsecurity.R
 
-class RegisterSensorActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_sensor)
+        setContentView(R.layout.activity_register)
     }
 }

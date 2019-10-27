@@ -1,4 +1,4 @@
-package com.codedirect.menu.sensor.detail
+package com.codedirect.trafficnetsecurity.ui.menu.sensor.detail
 
 
 import android.os.Bundle
@@ -7,19 +7,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.codedirect.model.DataModel
+import com.codedirect.trafficnetsecurity.model.DataModel
 import com.codedirect.trafficnetsecurity.R
-import kotlinx.android.synthetic.main.fragment_cctv.*
+import kotlinx.android.synthetic.main.fragment_sensors.*
 import kotlin.random.Random
 
-class CCTVFragment : Fragment() {
+/**
+ * A simple [Fragment] subclass.
+ */
+class SensorsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cctv, container, false)
+        return inflater.inflate(R.layout.fragment_sensors, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -30,20 +33,22 @@ class CCTVFragment : Fragment() {
         val info = arrayListOf<String>("Aman", "Indikasi", "Bahaya")
         val status = arrayListOf<String>("Online", "Offline")
 
-        for (i in 0 until 10) {
+        for (ite in 0..10) {
             dataItems.add(
                 DataModel(
                     "",
-                    "CCTV Halaman",
+                    "Pintu " + ite,
                     info[Random.nextInt(0, 2)],
                     status[Random.nextInt(0, 1)]
                 )
             )
         }
+
         val adapter = SensorsAdapter(dataItems) {}
 
-        rv_cctv.layoutManager = LinearLayoutManager(context)
-        rv_cctv.adapter = adapter
+        rv_sensor.layoutManager = LinearLayoutManager(context)
+        rv_sensor.adapter = adapter
+
     }
 
 
