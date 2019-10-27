@@ -28,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:trackTint="@color/switch_true" />
+            android:trackTint="@color/red_blood" />
     </LinearLayout>
 
     <com.mapbox.mapboxsdk.maps.MapView
@@ -51,7 +51,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginRight="@dimen/margin_small"
         android:layout_marginBottom="@dimen/margin_small"
-        android:background="@drawable/btn_rounded"
+        android:background="@drawable/btn_dark_rounded"
         android:fontFamily="@font/nunito"
         android:text="LAPORKAN"
         android:textColor="@android:color/white"

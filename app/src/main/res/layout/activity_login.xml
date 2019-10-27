@@ -22,7 +22,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_small"
         android:layout_marginRight="@dimen/margin_small"
-        android:background="@drawable/input_rect"
+        android:background="@drawable/input_white_rounded"
         android:fontFamily="@font/nunito"
         android:hint="@string/title_email"
         android:padding="@dimen/margin_supersmall" />
@@ -34,7 +34,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_supersmall"
         android:layout_marginRight="@dimen/margin_small"
-        android:background="@drawable/input_rect"
+        android:background="@drawable/input_white_rounded"
         android:fontFamily="@font/nunito"
         android:hint="@string/title_password"
         android:padding="@dimen/margin_supersmall" />
@@ -49,7 +49,7 @@
             android:id="@+id/rb_remember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/radio_primary"
+            android:buttonTint="@color/green_dark"
             android:fontFamily="@font/nunito"
             android:text="@string/title_remember" />
 
@@ -72,7 +72,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_supersmall"
         android:layout_marginRight="@dimen/margin_small"
-        android:background="@drawable/btn_rounded"
+        android:background="@drawable/btn_dark_rounded"
         android:fontFamily="@font/nunito"
         android:text="@string/title_login"
         android:textColor="@android:color/white"
@@ -104,7 +104,7 @@
             android:layout_marginStart="@dimen/margin_supersmall"
             android:fontFamily="@font/nunito"
             android:text="@string/title_sign_up"
-            android:textColor="@color/link_primary"
+            android:textColor="@color/green_light"
             android:textSize="@dimen/text_supersmall"
             android:textStyle="bold" />
 

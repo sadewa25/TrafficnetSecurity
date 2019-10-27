@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/input_rect"
+            android:background="@drawable/input_white_rounded"
             android:hint="345323432"
             android:padding="@dimen/margin_supersmall" />
 
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/input_rect"
+            android:background="@drawable/input_white_rounded"
             android:hint="WiFi-Kantor-Safevision"
             android:padding="@dimen/margin_supersmall" />
 
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/input_rect"
+            android:background="@drawable/input_white_rounded"
             android:hint="123456789"
             android:inputType="textPassword"
             android:padding="@dimen/margin_supersmall" />
@@ -104,7 +104,7 @@
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/margin_small"
         android:layout_marginBottom="@dimen/margin_small"
-        android:background="@drawable/btn_rounded"
+        android:background="@drawable/btn_dark_rounded"
         android:fontFamily="@font/nunito"
         android:text="Tambah Sensor"
         android:textColor="@android:color/white"

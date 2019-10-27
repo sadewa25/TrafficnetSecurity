@@ -4,14 +4,14 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/text_primary">
+    android:background="@color/white_pure">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/black_primary"
+        android:background="@color/dark_coal"
         android:clickable="true"
         android:focusable="true"
         app:itemIconTint="@drawable/state_list"

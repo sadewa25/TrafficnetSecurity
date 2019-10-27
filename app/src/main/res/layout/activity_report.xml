@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/input_rect"
+            android:background="@drawable/input_white_rounded"
             android:hint="Kebakaran"
             android:padding="@dimen/margin_supersmall" />
 
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/input_rect"
+            android:background="@drawable/input_white_rounded"
             android:gravity="top"
             android:hint="@string/hint_email"
             android:lines="5"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/input_rect"
+            android:background="@drawable/input_white_rounded"
             android:hint="123478265081"
             android:padding="@dimen/margin_supersmall" />
 
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
-            android:background="@drawable/input_rect"
+            android:background="@drawable/input_white_rounded"
             android:hint="@string/hint_kota"
             android:padding="@dimen/margin_supersmall" />
 
@@ -121,7 +121,7 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginRight="@dimen/margin_small"
             android:layout_marginBottom="@dimen/margin_small"
-            android:background="@drawable/btn_rounded"
+            android:background="@drawable/btn_dark_rounded"
             android:fontFamily="@font/nunito"
             android:text="Submit"
             android:textColor="@android:color/white"
