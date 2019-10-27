@@ -41,10 +41,12 @@ dependencies {
 
     implementation "org.jetbrains.anko:anko:${lib.anko}"
     implementation "org.jetbrains.anko:anko-commons:${lib.anko}"
-    //mapbox
+
     implementation "com.mapbox.mapboxsdk:mapbox-android-sdk:${lib.android_mapbox}"
-    //circleImageview
     implementation "de.hdodenhof:circleimageview:${lib.circleimageview}"
+
+    implementation "org.koin:koin-android:${lib.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${lib.koin}"
 
     testImplementation "junit:junit:${lib.test_junit}"
     androidTestImplementation "androidx.test:runner:${lib.test_runner}"

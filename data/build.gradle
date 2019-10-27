@@ -31,12 +31,11 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${lib.androidx_appcompat}"
     implementation "androidx.core:core-ktx:${lib.androidx_core}"
 
-    implementation "com.amitshekhar.android:android-networking:${lib.android_networking}"
-    implementation "com.google.code.gson:gson:${lib.google_gson}"
     implementation "javax.annotation:javax.annotation-api:${lib.javax_annotation}"
+    implementation "com.squareup.retrofit2:retrofit:${lib.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${lib.retrofit_gson}"
 
     implementation "org.koin:koin-android:${lib.koin}"
-    implementation "org.koin:koin-androidx-viewmodel:${lib.koin}"
 
     testImplementation "junit:junit:${lib.test_junit}"
     androidTestImplementation "androidx.test:runner:${lib.test_runner}"
