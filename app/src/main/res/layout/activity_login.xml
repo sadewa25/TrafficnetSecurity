@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical"
-    android:padding="@dimen/margin_large"
+    android:padding="@dimen/margin_superlarge"
     tools:context=".ui.login.LoginActivity">
 
     <ImageView
@@ -20,9 +20,7 @@
         android:id="@+id/et_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_small"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_superlarge"
         android:background="@drawable/input_white_rounded"
         android:fontFamily="@font/nunito"
         android:hint="@string/title_email"
@@ -32,9 +30,7 @@
         android:id="@+id/et_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_supersmall"
-        android:layout_marginRight="@dimen/margin_small"
         android:background="@drawable/input_white_rounded"
         android:fontFamily="@font/nunito"
         android:hint="@string/title_password"
@@ -42,9 +38,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_small"
-        android:layout_marginRight="@dimen/margin_small">
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/rb_remember"
@@ -71,9 +65,7 @@
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_small"
-        android:layout_marginTop="@dimen/margin_supersmall"
-        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_large"
         android:background="@drawable/btn_dark_rounded"
         android:fontFamily="@font/nunito"
         android:text="@string/title_login"
@@ -85,8 +77,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="@dimen/margin_supersmall">
