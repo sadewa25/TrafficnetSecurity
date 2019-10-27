@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity.ui.menu
+package com.codedirect.trafficnetsecurity.ui.homeprofile
 
 
 import android.os.Bundle
@@ -12,7 +12,7 @@ import com.codedirect.trafficnetsecurity.R
 /**
  * A simple [Fragment] subclass.
  */
-class ProfileFragment : Fragment() {
+class HomeProfileFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

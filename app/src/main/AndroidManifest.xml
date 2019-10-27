@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.codedirect.trafficnetsecurity.ui.report.ReportActivity"></activity>
-        <activity android:name="com.codedirect.trafficnetsecurity.ui.menu.RegisterSensorActivity" />
+        <activity android:name="com.codedirect.trafficnetsecurity.ui.createsensor.CreateSensorActivity" />
         <activity android:name="com.codedirect.trafficnetsecurity.ui.register.RegisterActivity" />
         <activity android:name=".ui.home.HomeActivity" />
         <activity

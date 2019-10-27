@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity.ui.menu.sensor.detail
+package com.codedirect.trafficnetsecurity.ui.sensorlist
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +9,10 @@ import com.codedirect.trafficnetsecurity.model.DataModel
 import com.codedirect.trafficnetsecurity.R
 import org.jetbrains.anko.find
 
-class SensorsAdapter(
+class SensorListAdapter(
     val dataItems: ArrayList<DataModel?>?,
     private val listener: (DataModel?) -> Unit
-) : RecyclerView.Adapter<SensorsAdapter.SensorVH>() {
+) : RecyclerView.Adapter<SensorListAdapter.SensorVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): SensorVH {
         val view: View =

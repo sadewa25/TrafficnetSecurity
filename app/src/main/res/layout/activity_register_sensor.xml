@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".ui.menu.RegisterSensorActivity">
+    tools:context=".ui.createsensor.CreateSensorActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

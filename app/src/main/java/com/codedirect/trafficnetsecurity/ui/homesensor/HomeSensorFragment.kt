@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity.ui.menu.sensor
+package com.codedirect.trafficnetsecurity.ui.homesensor
 
 
 import android.content.Intent
@@ -9,16 +9,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.viewpager.widget.ViewPager
-import com.codedirect.trafficnetsecurity.ui.menu.RegisterSensorActivity
-import com.codedirect.trafficnetsecurity.ui.menu.sensor.detail.CCTVFragment
-import com.codedirect.trafficnetsecurity.ui.menu.sensor.detail.SensorsFragment
+import com.codedirect.trafficnetsecurity.ui.createsensor.CreateSensorActivity
+import com.codedirect.trafficnetsecurity.ui.cctvlist.CCTVListFragment
+import com.codedirect.trafficnetsecurity.ui.sensorlist.SensorListFragment
 import com.codedirect.trafficnetsecurity.R
 import kotlinx.android.synthetic.main.fragment_sensor.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class SensorFragment : Fragment() {
+class HomeSensorFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +30,7 @@ class SensorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var starterIntent: Intent = Intent(activity, RegisterSensorActivity::class.java)
+        var starterIntent: Intent = Intent(activity, CreateSensorActivity::class.java)
 
         btn_add.setOnClickListener {
             startActivity(starterIntent)
@@ -55,7 +55,7 @@ class SensorFragment : Fragment() {
                     tv_main_sensor_title.text = getString(R.string.main_title_sensor)
                     tv_main_sensor_subtitle.text = getString(R.string.subtitle_sensor)
                     btn_add.text = getString(R.string.btn_sensor)
-                    starterIntent = Intent(activity, RegisterSensorActivity::class.java)
+                    starterIntent = Intent(activity, CreateSensorActivity::class.java)
                 } else {
                     tv_main_sensor_title.text = getString(R.string.main_title_cctv)
                     tv_main_sensor_subtitle.text = getString(R.string.subtitle_cctv)
@@ -69,9 +69,10 @@ class SensorFragment : Fragment() {
     }
 
     fun setupViewPager(viewPager: ViewPager, manager: FragmentManager?) {
-        var adapter: SensorViewPagerAdapter = SensorViewPagerAdapter(manager)
-        adapter.addFragment(SensorsFragment(), context?.getString(R.string.title_sensors)!!)
-        adapter.addFragment(CCTVFragment(), context?.getString(R.string.title_cctv)!!)
+        var adapter: HomeSensorViewPagerAdapter =
+            HomeSensorViewPagerAdapter(manager)
+        adapter.addFragment(SensorListFragment(), context?.getString(R.string.title_sensors)!!)
+        adapter.addFragment(CCTVListFragment(), context?.getString(R.string.title_cctv)!!)
 
         viewPager.adapter = adapter
     }

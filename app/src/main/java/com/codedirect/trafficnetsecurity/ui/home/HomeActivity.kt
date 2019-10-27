@@ -7,9 +7,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.codedirect.trafficnetsecurity.R
-import com.codedirect.trafficnetsecurity.ui.menu.HomeFragment
-import com.codedirect.trafficnetsecurity.ui.menu.ProfileFragment
-import com.codedirect.trafficnetsecurity.ui.menu.sensor.SensorFragment
+import com.codedirect.trafficnetsecurity.ui.homedashboard.HomeDashboardFragment
+import com.codedirect.trafficnetsecurity.ui.homeprofile.HomeProfileFragment
+import com.codedirect.trafficnetsecurity.ui.homesensor.HomeSensorFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
@@ -17,15 +17,15 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onNavigationItemSelected(menu: MenuItem): Boolean {
         when (menu.itemId) {
             R.id.navigation_home -> {
-                changeFragment(HomeFragment(), R.id.frame_main)
+                changeFragment(HomeDashboardFragment(), R.id.frame_main)
                 return true
             }
             R.id.navigation_sensor -> {
-                changeFragment(SensorFragment(), R.id.frame_main)
+                changeFragment(HomeSensorFragment(), R.id.frame_main)
                 return true
             }
             R.id.navigation_profile -> {
-                changeFragment(ProfileFragment(), R.id.frame_main)
+                changeFragment(HomeProfileFragment(), R.id.frame_main)
                 return true
             }
         }
@@ -34,7 +34,7 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
@@ -43,7 +43,7 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
 
         navView.setOnNavigationItemSelectedListener(this)
-        changeFragment(HomeFragment(), R.id.frame_main)
+        changeFragment(HomeDashboardFragment(), R.id.frame_main)
     }
 
 

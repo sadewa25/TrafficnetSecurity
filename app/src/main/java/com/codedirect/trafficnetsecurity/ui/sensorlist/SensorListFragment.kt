@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity.ui.menu.sensor.detail
+package com.codedirect.trafficnetsecurity.ui.sensorlist
 
 
 import android.os.Bundle
@@ -15,7 +15,7 @@ import kotlin.random.Random
 /**
  * A simple [Fragment] subclass.
  */
-class SensorsFragment : Fragment() {
+class SensorListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,7 +44,7 @@ class SensorsFragment : Fragment() {
             )
         }
 
-        val adapter = SensorsAdapter(dataItems) {}
+        val adapter = SensorListAdapter(dataItems) {}
 
         rv_sensor.layoutManager = LinearLayoutManager(context)
         rv_sensor.adapter = adapter

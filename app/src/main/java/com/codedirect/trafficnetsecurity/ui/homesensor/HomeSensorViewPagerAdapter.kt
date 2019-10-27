@@ -1,10 +1,10 @@
-package com.codedirect.trafficnetsecurity.ui.menu.sensor
+package com.codedirect.trafficnetsecurity.ui.homesensor
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 
-class SensorViewPagerAdapter(fm: FragmentManager?) : FragmentStatePagerAdapter(fm!!) {
+class HomeSensorViewPagerAdapter(fm: FragmentManager?) : FragmentStatePagerAdapter(fm!!) {
 
     private var dataFragment: ArrayList<Fragment> = ArrayList()
     private var dataFragmentTitle: ArrayList<String> = ArrayList()

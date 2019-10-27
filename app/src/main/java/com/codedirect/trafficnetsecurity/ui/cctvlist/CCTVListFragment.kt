@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity.ui.menu.sensor.detail
+package com.codedirect.trafficnetsecurity.ui.cctvlist
 
 
 import android.os.Bundle
@@ -9,10 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.codedirect.trafficnetsecurity.model.DataModel
 import com.codedirect.trafficnetsecurity.R
+import com.codedirect.trafficnetsecurity.ui.sensorlist.SensorListAdapter
 import kotlinx.android.synthetic.main.fragment_cctv.*
 import kotlin.random.Random
 
-class CCTVFragment : Fragment() {
+class CCTVListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +41,7 @@ class CCTVFragment : Fragment() {
                 )
             )
         }
-        val adapter = SensorsAdapter(dataItems) {}
+        val adapter = SensorListAdapter(dataItems) {}
 
         rv_cctv.layoutManager = LinearLayoutManager(context)
         rv_cctv.adapter = adapter

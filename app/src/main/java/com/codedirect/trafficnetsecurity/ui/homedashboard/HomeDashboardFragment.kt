@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity.ui.menu
+package com.codedirect.trafficnetsecurity.ui.homedashboard
 
 
 import android.content.Intent
@@ -7,17 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.codedirect.trafficnetsecurity.ui.report.ReportActivity
 import com.codedirect.trafficnetsecurity.R
+import com.codedirect.trafficnetsecurity.ui.report.ReportActivity
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.Style
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 
 
 /**
  * A simple [Fragment] subclass.
  */
-class HomeFragment : Fragment() {
+class HomeDashboardFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -30,7 +30,7 @@ class HomeFragment : Fragment() {
             getString(R.string.mapbox_api_key)
         )
         return inflater.inflate(
-            com.codedirect.trafficnetsecurity.R.layout.fragment_home,
+            R.layout.fragment_dashboard,
             container,
             false
         )
