@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.codedirect.trafficnetsecurity.model.DataModel
 import com.codedirect.trafficnetsecurity.R
-import kotlinx.android.synthetic.main.fragment_sensors.*
+import kotlinx.android.synthetic.main.fragment_home_sensor.*
 import kotlin.random.Random
 
 /**
@@ -22,7 +22,7 @@ class SensorListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sensors, container, false)
+        return inflater.inflate(R.layout.fragment_home_sensor, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -8,6 +8,6 @@ class CreateSensorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_sensor)
+        setContentView(R.layout.activity_create_sensor)
     }
 }

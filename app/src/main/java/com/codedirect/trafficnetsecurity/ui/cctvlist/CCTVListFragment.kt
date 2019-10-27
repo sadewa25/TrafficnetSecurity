@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.codedirect.trafficnetsecurity.model.DataModel
 import com.codedirect.trafficnetsecurity.R
 import com.codedirect.trafficnetsecurity.ui.sensorlist.SensorListAdapter
-import kotlinx.android.synthetic.main.fragment_cctv.*
+import kotlinx.android.synthetic.main.fragment_cctv_list.*
 import kotlin.random.Random
 
 class CCTVListFragment : Fragment() {
@@ -20,7 +20,7 @@ class CCTVListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cctv, container, false)
+        return inflater.inflate(R.layout.fragment_cctv_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

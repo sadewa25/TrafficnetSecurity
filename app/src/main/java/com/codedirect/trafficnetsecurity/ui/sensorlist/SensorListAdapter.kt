@@ -16,7 +16,7 @@ class SensorListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): SensorVH {
         val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_sensor, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.list_sensor, parent, false)
         return SensorVH(view)
     }
 

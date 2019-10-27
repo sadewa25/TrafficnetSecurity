@@ -11,7 +11,7 @@ import com.codedirect.trafficnetsecurity.R
 import com.codedirect.trafficnetsecurity.ui.report.ReportActivity
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.Style
-import kotlinx.android.synthetic.main.fragment_dashboard.*
+import kotlinx.android.synthetic.main.fragment_home_dashboard.*
 
 
 /**
@@ -30,7 +30,7 @@ class HomeDashboardFragment : Fragment() {
             getString(R.string.mapbox_api_key)
         )
         return inflater.inflate(
-            R.layout.fragment_dashboard,
+            R.layout.fragment_home_dashboard,
             container,
             false
         )

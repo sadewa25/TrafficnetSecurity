@@ -13,7 +13,7 @@ import com.codedirect.trafficnetsecurity.ui.createsensor.CreateSensorActivity
 import com.codedirect.trafficnetsecurity.ui.cctvlist.CCTVListFragment
 import com.codedirect.trafficnetsecurity.ui.sensorlist.SensorListFragment
 import com.codedirect.trafficnetsecurity.R
-import kotlinx.android.synthetic.main.fragment_sensor.*
+import kotlinx.android.synthetic.main.fragment_sensor_list.*
 
 /**
  * A simple [Fragment] subclass.
@@ -24,7 +24,7 @@ class HomeSensorFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_sensor, container, false)
+        return inflater.inflate(R.layout.fragment_sensor_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
