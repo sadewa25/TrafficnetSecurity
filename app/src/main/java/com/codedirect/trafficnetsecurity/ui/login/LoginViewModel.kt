@@ -1,6 +1,7 @@
 package com.codedirect.trafficnetsecurity.ui.login
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.codedirect.trafficnetsecurity.data.repo.UserRepository
 import com.codedirect.trafficnetsecurity.ui.AppViewModel
 import kotlinx.coroutines.launch
@@ -20,8 +21,16 @@ class LoginViewModel(
     val passwordField: MutableLiveData<String> by lazy { MutableLiveData("") }
     val isLoading: MutableLiveData<Boolean> by lazy { MutableLiveData(false) }
 
+    override fun init() {
+        viewModelScope.launch {
+            if (userRepository.isLoggedIn()) {
+                action.value = ACTION_OPEN_HOME
+            }
+        }
+    }
+
     fun doSignIn() {
-        launch {
+        viewModelScope.launch {
             try {
                 isLoading.value = true
                 usernameField.value?.let { email ->

@@ -2,54 +2,44 @@ package com.codedirect.trafficnetsecurity.ui.sensorlist
 
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.codedirect.trafficnetsecurity.model.DataModel
 import com.codedirect.trafficnetsecurity.R
-import kotlinx.android.synthetic.main.fragment_home_sensor.*
-import kotlin.random.Random
+import com.codedirect.trafficnetsecurity.databinding.FragmentSensorListBinding
+import com.codedirect.trafficnetsecurity.model.DataModel
+import com.codedirect.trafficnetsecurity.ui.AppFragment
+import com.codedirect.trafficnetsecurity.ui.AppListAdapter
+import kotlinx.android.synthetic.main.fragment_sensor_list.*
+import org.jetbrains.anko.support.v4.toast
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-/**
- * A simple [Fragment] subclass.
- */
-class SensorListFragment : Fragment() {
+class SensorListFragment : AppFragment<FragmentSensorListBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_sensor, container, false)
+    override val layoutId by lazy { R.layout.fragment_sensor_list }
+
+    override val viewModel by viewModel<SensorListViewModel>()
+
+    private val sensorListAdapter by lazy {
+        SensorListAdapter(object : AppListAdapter.ItemViewClickListener<DataModel> {
+            override fun onClick(data: DataModel, position: Int) {
+                toast(data.title)
+            }
+        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val dataItems = arrayListOf<DataModel?>()
-
-        val info = arrayListOf<String>("Aman", "Indikasi", "Bahaya")
-        val status = arrayListOf<String>("Online", "Offline")
-
-        for (ite in 0..10) {
-            dataItems.add(
-                DataModel(
-                    "",
-                    "Pintu " + ite,
-                    info[Random.nextInt(0, 2)],
-                    status[Random.nextInt(0, 1)]
-                )
-            )
-        }
-
-        val adapter = SensorListAdapter(dataItems) {}
-
         rv_sensor.layoutManager = LinearLayoutManager(context)
-        rv_sensor.adapter = adapter
+        rv_sensor.adapter = sensorListAdapter
 
+        viewModel.sensorList.observe(this, Observer {
+            with(sensorListAdapter) {
+                dataList.clear()
+                dataList.addAll(it)
+                notifyDataSetChanged()
+            }
+        })
     }
-
 
 }

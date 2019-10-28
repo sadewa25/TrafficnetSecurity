@@ -1,6 +1,6 @@
 package com.codedirect.trafficnetsecurity.model
 
-data class CctvModel(
+data class CCTVModel(
     val id : Int,
     val ssid : String,
     val pass : String,

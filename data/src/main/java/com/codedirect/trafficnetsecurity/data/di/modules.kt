@@ -3,6 +3,7 @@ package com.codedirect.trafficnetsecurity.data.di
 import android.content.Context
 import com.codedirect.trafficnetsecurity.data.local.prefs.DataCache
 import com.codedirect.trafficnetsecurity.data.remote.APIEndpoint
+import com.codedirect.trafficnetsecurity.data.repo.SensorRepository
 import com.codedirect.trafficnetsecurity.data.repo.UserRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -37,5 +38,6 @@ val dataModule = module {
 
     single { get<Retrofit>().create(APIEndpoint::class.java) }
     single { UserRepository(get(), get()) }
+    single { SensorRepository(get()) }
 
 }

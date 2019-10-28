@@ -1,39 +1,28 @@
 package com.codedirect.trafficnetsecurity.ui.sensorlist
 
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.codedirect.trafficnetsecurity.model.DataModel
 import com.codedirect.trafficnetsecurity.R
-import org.jetbrains.anko.find
+import com.codedirect.trafficnetsecurity.model.DataModel
+import com.codedirect.trafficnetsecurity.ui.AppListAdapter
+import kotlinx.android.synthetic.main.list_sensor.view.*
 
-class SensorListAdapter(
-    val dataItems: ArrayList<DataModel?>?,
-    private val listener: (DataModel?) -> Unit
-) : RecyclerView.Adapter<SensorListAdapter.SensorVH>() {
+class SensorListAdapter(onClickListener: ItemViewClickListener<DataModel>) :
+    AppListAdapter<DataModel>(mutableListOf(), onClickListener) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, position: Int): SensorVH {
-        val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.list_sensor, parent, false)
-        return SensorVH(view)
-    }
+    override val itemLayoutId = R.layout.list_sensor
 
-    override fun getItemCount(): Int = dataItems!!.size
+    override fun newViewHolder(view: View): AppViewHolder<DataModel> = SensorVH(view)
 
-    override fun onBindViewHolder(itemholder: SensorVH, position: Int) {
-        itemholder.bind(dataItems?.get(position), listener)
-    }
+    class SensorVH(v: View) : AppViewHolder<DataModel>(v) {
 
-    class SensorVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        val textItemTitle = itemView.find<TextView>(R.id.tv_sensor_title)
-
-        fun bind(resultItemAPI: DataModel?, listener: (DataModel?) -> Unit) {
-
-            textItemTitle.text = resultItemAPI?.title
-            itemView.setOnClickListener { listener(resultItemAPI) }
+        override fun bind(data: DataModel) {
+            with(itemView) {
+                tv_sensor_title.text = data.title
+                tv_sensor_info.text = data.info
+                tv_sensor_status.text = data.status
+            }
         }
+
     }
+
 }

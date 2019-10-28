@@ -1,12 +1,21 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.cctvlist.CCTVListFragment">
+<layout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_cctv"
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.codedirect.trafficnetsecurity.ui.cctvlist.CCTVListViewModel" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cctv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+</layout>

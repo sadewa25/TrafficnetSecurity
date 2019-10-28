@@ -1,7 +1,6 @@
 package com.codedirect.trafficnetsecurity.ui.homedashboard
 
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +11,7 @@ import com.codedirect.trafficnetsecurity.ui.report.ReportActivity
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.Style
 import kotlinx.android.synthetic.main.fragment_home_dashboard.*
+import org.jetbrains.anko.support.v4.startActivity
 
 
 /**
@@ -40,16 +40,9 @@ class HomeDashboardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mapView.onCreate(savedInstanceState)
-        mapView.getMapAsync { mapboxMap ->
-            mapboxMap.setStyle(Style.MAPBOX_STREETS, object : Style.OnStyleLoaded {
-                override fun onStyleLoaded(style: Style) {
-
-                }
-            })
-        }
+        mapView.getMapAsync { mapboxMap -> mapboxMap.setStyle(Style.MAPBOX_STREETS) }
         btn_laporan.setOnClickListener {
-            val intent: Intent = Intent(activity, ReportActivity::class.java)
-            startActivity(intent)
+            startActivity<ReportActivity>()
         }
 
     }

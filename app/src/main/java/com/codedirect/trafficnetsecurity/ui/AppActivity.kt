@@ -26,6 +26,8 @@ abstract class AppActivity<T : ViewDataBinding> : AppCompatActivity() {
 
         viewModel.action.observe(this, Observer { chooseAction(it) })
         viewModel.toast.observe(this, Observer { showMessage(it) })
+
+        viewModel.init()
     }
 
     protected open fun chooseAction(action: Int) {
