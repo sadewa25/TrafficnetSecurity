@@ -6,7 +6,7 @@ interface IUserRepository {
 
     suspend fun signIn(email: String, password: String): String?
 
-    suspend fun changePassword(currentPassword: String, newPassword: String): Boolean
+    suspend fun changePassword(currentPassword: String, newPassword: String): String?
 
     suspend fun isLoggedIn(): Boolean
 

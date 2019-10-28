@@ -27,7 +27,7 @@ interface APIEndpoint {
     suspend fun changePassword(
         @Field("current_password") currentPassword: String,
         @Field("new_password") newPassword: String
-    )
+    ): MessageData
 
     @GET("sensor/getByUsername")
     suspend fun getMySensorList(): List<SensorData>

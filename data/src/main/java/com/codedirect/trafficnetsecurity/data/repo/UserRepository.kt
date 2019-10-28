@@ -19,8 +19,8 @@ class UserRepository(
         }
     }
 
-    override suspend fun changePassword(currentPassword: String, newPassword: String): Boolean {
-        return mAPIEndpoint.changePassword(currentPassword, newPassword).let { true }
+    override suspend fun changePassword(currentPassword: String, newPassword: String): String? {
+        return mAPIEndpoint.changePassword(currentPassword, newPassword).message
     }
 
     override suspend fun isLoggedIn(): Boolean = mDataCache.getToken() != null
