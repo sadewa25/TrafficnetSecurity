@@ -34,6 +34,7 @@ dependencies {
     implementation "javax.annotation:javax.annotation-api:${lib.javax_annotation}"
     implementation "com.squareup.retrofit2:retrofit:${lib.retrofit}"
     implementation "com.squareup.retrofit2:converter-gson:${lib.retrofit_gson}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${lib.retrofit_logging}"
 
     implementation "org.koin:koin-android:${lib.koin}"
 

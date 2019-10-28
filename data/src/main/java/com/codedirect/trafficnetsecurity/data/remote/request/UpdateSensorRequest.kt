@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity.data.repo.request
+package com.codedirect.trafficnetsecurity.data.remote.request
 
 import javax.annotation.Generated
 import com.google.gson.annotations.SerializedName

@@ -1,7 +1,7 @@
-package com.codedirect.trafficnetsecurity.data.repo
+package com.codedirect.trafficnetsecurity.data.remote
 
-import com.codedirect.trafficnetsecurity.data.repo.response.LoginData
-import com.codedirect.trafficnetsecurity.data.repo.response.SensorData
+import com.codedirect.trafficnetsecurity.data.remote.response.LoginData
+import com.codedirect.trafficnetsecurity.data.remote.response.SensorData
 import retrofit2.http.*
 
 interface APIEndpoint {

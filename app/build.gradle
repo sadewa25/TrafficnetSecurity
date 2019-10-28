@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion config.compileSdk
     buildToolsVersion config.buildTools
@@ -20,6 +22,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    dataBinding {
+        enabled = true
     }
 }
 
@@ -51,4 +56,6 @@ dependencies {
     testImplementation "junit:junit:${lib.test_junit}"
     androidTestImplementation "androidx.test:runner:${lib.test_runner}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${lib.test_espresso}"
+
+    implementation project(":data")
 }

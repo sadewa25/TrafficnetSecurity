@@ -1,8 +1,9 @@
 package com.codedirect.trafficnetsecurity.data.repo
 
-import com.codedirect.trafficnetsecurity.data.repo.request.CreateSensorRequest
-import com.codedirect.trafficnetsecurity.data.repo.request.UpdateSensorRequest
-import com.codedirect.trafficnetsecurity.data.repo.response.SensorData
+import com.codedirect.trafficnetsecurity.data.remote.APIEndpoint
+import com.codedirect.trafficnetsecurity.data.remote.request.CreateSensorRequest
+import com.codedirect.trafficnetsecurity.data.remote.request.UpdateSensorRequest
+import com.codedirect.trafficnetsecurity.data.remote.response.SensorData
 import com.codedirect.trafficnetsecurity.data.util.orZero
 
 class SensorRepository(private val mApiEndpoint: APIEndpoint) : ISensorRepository {

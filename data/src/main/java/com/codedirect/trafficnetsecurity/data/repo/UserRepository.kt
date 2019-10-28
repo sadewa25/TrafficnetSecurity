@@ -1,6 +1,7 @@
 package com.codedirect.trafficnetsecurity.data.repo
 
-import com.codedirect.trafficnetsecurity.data.prefs.DataCache
+import com.codedirect.trafficnetsecurity.data.local.prefs.DataCache
+import com.codedirect.trafficnetsecurity.data.remote.APIEndpoint
 
 class UserRepository(
     private val mAPIEndpoint: APIEndpoint,

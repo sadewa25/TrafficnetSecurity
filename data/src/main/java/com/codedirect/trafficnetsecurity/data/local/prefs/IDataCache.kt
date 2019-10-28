@@ -1,4 +1,4 @@
-package com.codedirect.trafficnetsecurity.data.prefs
+package com.codedirect.trafficnetsecurity.data.local.prefs
 
 interface IDataCache {
 

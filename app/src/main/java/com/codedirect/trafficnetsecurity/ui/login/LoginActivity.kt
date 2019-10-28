@@ -1,28 +1,21 @@
 package com.codedirect.trafficnetsecurity.ui.login
 
-import android.content.Intent
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.codedirect.trafficnetsecurity.ui.register.RegisterActivity
-import com.codedirect.trafficnetsecurity.ui.home.HomeActivity
 import com.codedirect.trafficnetsecurity.R
-import kotlinx.android.synthetic.main.activity_login.*
+import com.codedirect.trafficnetsecurity.databinding.ActivityLoginBinding
+import com.codedirect.trafficnetsecurity.ui.AppActivity
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppActivity<ActivityLoginBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+    override val viewModel by viewModel<LoginViewModel>()
 
-        btn_login.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+    override val layoutId by lazy { R.layout.activity_login }
 
-        tv_link_to_register.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+    override fun chooseAction(action: Int) {
+        when (action) {
+            LoginViewModel.ACTION_OPEN_HOME -> navigator.openHome()
+            LoginViewModel.ACTION_OPEN_REGISTRATION -> navigator.openRegistration()
+            else -> super.chooseAction(action)
         }
     }
 }
