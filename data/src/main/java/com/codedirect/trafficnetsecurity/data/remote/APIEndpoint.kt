@@ -32,6 +32,13 @@ interface APIEndpoint {
         @Field("new_password") newPassword: String
     ): GeneralData<String>
 
+    @FormUrlEncoded
+    @POST("user/updateLoggedIn")
+    suspend fun changeProfile(
+        @Field("username") newUsername: String,
+        @Field("email") newEmail: String
+    ): GeneralData<ProfileData>
+
     @GET("sensor/getByUsername")
     suspend fun getMySensorList(): List<SensorData>
 

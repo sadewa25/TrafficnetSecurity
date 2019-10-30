@@ -18,8 +18,8 @@ class SensorRepository(private val mApiEndpoint: APIEndpoint) : ISensorRepositor
 
     override suspend fun createSensor(body: CreateSensorRequest): SensorData {
         return mApiEndpoint.createSensor(
-            body.id.orEmpty(),
-            body.jenis.orEmpty(),
+            body.id,
+            body.jenis,
             body.jsonMemberLong.orZero(),
             body.lat.orZero()
         )
@@ -28,8 +28,8 @@ class SensorRepository(private val mApiEndpoint: APIEndpoint) : ISensorRepositor
     override suspend fun updateSensor(body: UpdateSensorRequest, sensorId: String): SensorData {
         return mApiEndpoint.updateSensor(
             sensorId,
-            body.id.orEmpty(),
-            body.jenis.orEmpty(),
+            body.id,
+            body.jenis,
             body.jsonMemberLong.orZero(),
             body.lat.orZero()
         )

@@ -7,14 +7,14 @@ import com.google.gson.annotations.SerializedName
 data class CreateSensorRequest(
 
 	@field:SerializedName("jenis")
-	val jenis: String? = null,
+	val jenis: String,
 
 	@field:SerializedName("id")
-	val id: String? = null,
+	val id: String,
 
 	@field:SerializedName("long")
-	val jsonMemberLong: String? = null,
+	val jsonMemberLong: String,
 
 	@field:SerializedName("lat")
-	val lat: String? = null
+	val lat: String
 )
