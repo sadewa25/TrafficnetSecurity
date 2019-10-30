@@ -2,13 +2,12 @@ package com.codedirect.trafficnetsecurity.ui.login
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.codedirect.trafficnetsecurity.data.remote.request.LoginRequest
 import com.codedirect.trafficnetsecurity.data.repo.UserRepository
 import com.codedirect.trafficnetsecurity.ui.AppViewModel
 import kotlinx.coroutines.launch
 
-class LoginViewModel(
-    val userRepository: UserRepository
-) : AppViewModel() {
+class LoginViewModel(val userRepository: UserRepository) : AppViewModel() {
 
     companion object {
 
@@ -35,7 +34,7 @@ class LoginViewModel(
                 isLoading.value = true
                 usernameField.value?.let { email ->
                     passwordField.value?.let { password ->
-                        val result = userRepository.signIn(email, password)
+                        val result = userRepository.signIn(LoginRequest(password, email))
                         if (result != null) {
                             toast.value = result
                             action.value = ACTION_OPEN_HOME
