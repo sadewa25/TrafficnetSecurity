@@ -33,10 +33,8 @@ class SensorListViewModel(val sensorRepository: SensorRepository) : AppViewModel
 
     fun fetchSensorList() {
         viewModelScope.launch {
-            try {
-                mSensorList.value = sensorRepository.getSensorList()
-            } catch (e: Exception) {
-                toast.value = e.message
+            handle(sensorRepository.getSensorList()) {
+                data?.let { mSensorList.value = it }
             }
         }
     }

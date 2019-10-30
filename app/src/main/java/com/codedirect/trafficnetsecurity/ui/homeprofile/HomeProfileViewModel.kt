@@ -4,6 +4,7 @@ import android.text.TextUtils
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.codedirect.trafficnetsecurity.data.local.prefs.DataCache
+import com.codedirect.trafficnetsecurity.data.remote.request.ChangePasswordRequest
 import com.codedirect.trafficnetsecurity.data.repo.UserRepository
 import com.codedirect.trafficnetsecurity.ui.AppViewModel
 import kotlinx.coroutines.launch
@@ -26,20 +27,19 @@ class HomeProfileViewModel(
 
     fun save() {
         viewModelScope.launch {
-            try {
-                val changePasswordValidates = listOf(
-                    currentPasswordField.value,
-                    newPasswordField.value
-                ).map { !TextUtils.isEmpty(it) }
+            val changePasswordValidates = listOf(
+                currentPasswordField.value,
+                newPasswordField.value
+            ).map { !TextUtils.isEmpty(it) }
 
-                if (!changePasswordValidates.contains(false)) {
-                    userRepository.changePassword(
-                        currentPasswordField.value.orEmpty(),
-                        newPasswordField.value.orEmpty()
-                    )?.let { toast.value = it }
+            if (!changePasswordValidates.contains(false)) {
+                val request = ChangePasswordRequest(
+                    currentPasswordField.value.orEmpty(),
+                    newPasswordField.value.orEmpty()
+                )
+                handle(userRepository.changePassword(request)) {
+                    data?.let { toast.value = it }
                 }
-            } catch (e: Exception) {
-                toast.value = e.message
             }
         }
     }

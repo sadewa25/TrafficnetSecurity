@@ -22,30 +22,30 @@ class LoginViewModel(val userRepository: UserRepository) : AppViewModel() {
 
     override fun init() {
         viewModelScope.launch {
-            if (userRepository.isLoggedIn()) {
-                action.value = ACTION_OPEN_HOME
+            with(userRepository.isLoggedIn()) {
+                data?.let { if (it) action.value = ACTION_OPEN_HOME }
+                error?.let { toast.value = it }
             }
         }
     }
 
     fun doSignIn() {
         viewModelScope.launch {
-            try {
-                isLoading.value = true
-                usernameField.value?.let { email ->
-                    passwordField.value?.let { password ->
-                        val result = userRepository.signIn(LoginRequest(password, email))
-                        if (result != null) {
-                            toast.value = result
-                            action.value = ACTION_OPEN_HOME
-                        }
+            isLoading.value = true
+
+            if (usernameField.value != null && passwordField.value != null) {
+                val email = usernameField.value!!
+                val password = passwordField.value!!
+                val request = LoginRequest(password, email)
+                handle(userRepository.signIn(request)) {
+                    data?.let {
+                        toast.value = it
+                        action.value = ACTION_OPEN_HOME
                     }
                 }
-            } catch (e: Exception) {
-                toast.value = e.message
-            } finally {
-                isLoading.value = false
-            }
+            } else toast.value = "Username dan password harus diisi"
+
+            isLoading.value = false
         }
     }
 

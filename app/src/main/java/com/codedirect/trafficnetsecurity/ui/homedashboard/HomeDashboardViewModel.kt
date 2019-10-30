@@ -15,9 +15,7 @@ class HomeDashboardViewModel(val sensorRepository: SensorRepository) : AppViewMo
     private val mSensorList by lazy { MutableLiveData<List<SensorData>>() }
 
     val sensorList by lazy {
-        Transformations.map(
-            mSensorList
-        ) { data ->
+        Transformations.map(mSensorList) { data ->
             data.map {
                 MarkerModel(
                     it.id.orEmpty(),
@@ -34,7 +32,10 @@ class HomeDashboardViewModel(val sensorRepository: SensorRepository) : AppViewMo
 
     private fun fetchSensorList() {
         viewModelScope.launch {
-            mSensorList.value = sensorRepository.getSensorList()
+            with(sensorRepository.getSensorList()) {
+                data?.let { mSensorList.value = it }
+                error?.let { toast.value = it }
+            }
         }
     }
 
