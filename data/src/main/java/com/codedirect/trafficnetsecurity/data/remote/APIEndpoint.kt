@@ -1,7 +1,7 @@
 package com.codedirect.trafficnetsecurity.data.remote
 
-import com.codedirect.trafficnetsecurity.data.remote.response.LoginData
-import com.codedirect.trafficnetsecurity.data.remote.response.MessageData
+import com.codedirect.trafficnetsecurity.data.remote.response.GeneralData
+import com.codedirect.trafficnetsecurity.data.remote.response.ProfileData
 import com.codedirect.trafficnetsecurity.data.remote.response.SensorData
 import retrofit2.http.*
 
@@ -13,21 +13,24 @@ interface APIEndpoint {
         @Field("username") username: String,
         @Field("email") email: String,
         @Field("password") password: String
-    ): MessageData
+    ): GeneralData<*>
 
     @FormUrlEncoded
     @POST("user/login/resident")
     suspend fun login(
         @Field("email") email: String,
         @Field("password") password: String
-    ): LoginData
+    ): GeneralData<*>
+
+    @GET("user/getLoggedIn")
+    suspend fun profile(): GeneralData<ProfileData>
 
     @FormUrlEncoded
     @POST("user/changePassword")
     suspend fun changePassword(
         @Field("current_password") currentPassword: String,
         @Field("new_password") newPassword: String
-    ): MessageData
+    ): GeneralData<String>
 
     @GET("sensor/getByUsername")
     suspend fun getMySensorList(): List<SensorData>
