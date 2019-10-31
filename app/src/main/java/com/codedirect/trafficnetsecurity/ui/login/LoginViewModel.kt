@@ -16,9 +16,9 @@ class LoginViewModel(val userRepository: UserRepository) : AppViewModel() {
 
     }
 
-    val usernameField: MutableLiveData<String> by lazy { MutableLiveData("") }
-    val passwordField: MutableLiveData<String> by lazy { MutableLiveData("") }
-    val isLoading: MutableLiveData<Boolean> by lazy { MutableLiveData(false) }
+    val usernameField by lazy { MutableLiveData("") }
+    val passwordField by lazy { MutableLiveData("") }
+    val isLoading by lazy { MutableLiveData(false) }
 
     override fun init() {
         viewModelScope.launch {

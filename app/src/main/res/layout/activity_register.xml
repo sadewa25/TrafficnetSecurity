@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_white_rounded"
-                android:hint="@string/hint_username"
+                android:hint="@string/hint_new_username"
                 android:inputType="textCapCharacters"
                 android:padding="@dimen/margin_supersmall"
                 android:text="@={viewmodel.usernameField}" />

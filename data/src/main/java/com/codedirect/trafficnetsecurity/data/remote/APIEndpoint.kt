@@ -26,14 +26,14 @@ interface APIEndpoint {
     suspend fun profile(): GeneralData<ProfileData>
 
     @FormUrlEncoded
-    @POST("user/changePassword")
+    @PATCH("user/updatePassword")
     suspend fun changePassword(
         @Field("current_password") currentPassword: String,
         @Field("new_password") newPassword: String
     ): GeneralData<String>
 
     @FormUrlEncoded
-    @POST("user/updateLoggedIn")
+    @PATCH("user/updateLoggedIn")
     suspend fun changeProfile(
         @Field("username") newUsername: String,
         @Field("email") newEmail: String

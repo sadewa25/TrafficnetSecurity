@@ -21,6 +21,7 @@ abstract class AppActivity<T : ViewDataBinding> : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        binding.lifecycleOwner = this
         binding.setVariable(BR.viewmodel, viewModel)
         binding.executePendingBindings()
 

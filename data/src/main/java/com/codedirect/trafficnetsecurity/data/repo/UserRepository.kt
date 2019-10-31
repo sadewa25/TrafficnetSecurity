@@ -7,6 +7,7 @@ import com.codedirect.trafficnetsecurity.data.remote.request.ChangePasswordReque
 import com.codedirect.trafficnetsecurity.data.remote.request.ChangeProfileRequest
 import com.codedirect.trafficnetsecurity.data.remote.request.LoginRequest
 import com.codedirect.trafficnetsecurity.data.remote.request.RegisterRequest
+import com.codedirect.trafficnetsecurity.data.remote.response.ProfileData
 
 class UserRepository(
     private val mAPIEndpoint: APIEndpoint,
@@ -30,6 +31,10 @@ class UserRepository(
                 data.message
             }
         }
+    }
+
+    override suspend fun signedInProfile(): Outcome<ProfileData> {
+        return fetch { mAPIEndpoint.profile().data }
     }
 
     override suspend fun changePassword(changePasswordRequest: ChangePasswordRequest): Outcome<String> {

@@ -3,11 +3,11 @@ package com.codedirect.trafficnetsecurity.ui.register
 import com.codedirect.trafficnetsecurity.R
 import com.codedirect.trafficnetsecurity.databinding.ActivityRegisterBinding
 import com.codedirect.trafficnetsecurity.ui.AppActivity
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegisterActivity : AppActivity<ActivityRegisterBinding>() {
 
-    override val viewModel by inject<RegisterViewModel>()
+    override val viewModel by viewModel<RegisterViewModel>()
 
     override val layoutId by lazy { R.layout.activity_register }
 

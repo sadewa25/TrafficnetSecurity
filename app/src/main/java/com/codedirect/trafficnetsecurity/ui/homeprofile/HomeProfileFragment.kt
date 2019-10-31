@@ -1,26 +1,26 @@
 package com.codedirect.trafficnetsecurity.ui.homeprofile
 
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-
 import com.codedirect.trafficnetsecurity.R
+import com.codedirect.trafficnetsecurity.databinding.FragmentHomeProfileBinding
+import com.codedirect.trafficnetsecurity.ui.AppFragment
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * A simple [Fragment] subclass.
  */
-class HomeProfileFragment : Fragment() {
+class HomeProfileFragment : AppFragment<FragmentHomeProfileBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_profile, container, false)
+    override val layoutId by lazy { R.layout.fragment_home_profile }
+
+    override val viewModel by viewModel<HomeProfileViewModel>()
+
+    override fun chooseAction(action: Int) {
+        when (action) {
+            HomeProfileViewModel.OPEN_CLEAR_LOGIN_PAGE -> navigator?.openLogin()
+            else -> super.chooseAction(action)
+        }
     }
-
 
 }
