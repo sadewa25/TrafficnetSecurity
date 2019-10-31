@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.viewpager.widget.ViewPager
 import com.codedirect.trafficnetsecurity.R
 import com.codedirect.trafficnetsecurity.ui.cctvlist.CCTVListFragment
+import com.codedirect.trafficnetsecurity.ui.createcctv.CreateCCTVActivity
 import com.codedirect.trafficnetsecurity.ui.createsensor.CreateSensorActivity
 import com.codedirect.trafficnetsecurity.ui.sensorlist.SensorListFragment
 import com.google.android.material.tabs.TabLayout
@@ -63,7 +64,7 @@ class HomeSensorFragment : Fragment() {
                     tv_main_sensor_title.text = getString(R.string.main_title_cctv)
                     tv_main_sensor_subtitle.text = getString(R.string.subtitle_cctv)
                     btn_add.text = getString(R.string.btn_cctv)
-                    starterIntent = Intent(activity, CreateSensorActivity::class.java)
+                    starterIntent = Intent(activity, CreateCCTVActivity::class.java)
                 }
             }
         })

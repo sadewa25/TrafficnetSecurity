@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:background="@color/white_pure">
 
-
         <TextView
             android:id="@+id/tv_main_sensor_title"
             android:layout_width="match_parent"
@@ -31,6 +30,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_small"
+            android:fontFamily="@font/nunito"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
             android:text="@string/subtitle_sensor"
             android:textAlignment="center" />
 
