@@ -8,7 +8,6 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_small"
@@ -23,7 +22,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginRight="@dimen/margin_small"
         android:fontFamily="@font/nunito"
-        android:text="Muhammad Salah"
+        android:text="@string/person_name"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -34,7 +33,7 @@
         android:layout_marginLeft="@dimen/margin_small"
         android:layout_marginRight="@dimen/margin_small"
         android:fontFamily="@font/nunito_sans"
-        android:text="Surabaya"
+        android:text="@string/person_city"
         android:textAlignment="center" />
 
     <EditText
@@ -44,7 +43,7 @@
         android:layout_marginTop="@dimen/margin_supersmall"
         android:layout_marginRight="@dimen/margin_small"
         android:background="@drawable/input_white_rounded"
-        android:hint="Fullname"
+        android:hint="@string/hint_fullname"
         android:padding="@dimen/margin_supersmall" />
 
     <EditText
@@ -54,7 +53,7 @@
         android:layout_marginTop="@dimen/margin_supersmall"
         android:layout_marginRight="@dimen/margin_small"
         android:background="@drawable/input_white_rounded"
-        android:hint="Email"
+        android:hint="@string/title_email"
         android:padding="@dimen/margin_supersmall" />
 
     <EditText
@@ -64,7 +63,7 @@
         android:layout_marginTop="@dimen/margin_supersmall"
         android:layout_marginRight="@dimen/margin_small"
         android:background="@drawable/input_white_rounded"
-        android:hint="Address"
+        android:hint="@string/hint_address"
         android:padding="@dimen/margin_supersmall" />
 
     <EditText
@@ -74,7 +73,7 @@
         android:layout_marginTop="@dimen/margin_supersmall"
         android:layout_marginRight="@dimen/margin_small"
         android:background="@drawable/input_white_rounded"
-        android:hint="City"
+        android:hint="@string/hint_city"
         android:padding="@dimen/margin_supersmall" />
 
     <Button
@@ -85,7 +84,7 @@
         android:layout_marginRight="@dimen/margin_small"
         android:background="@drawable/btn_dark_rounded"
         android:fontFamily="@font/nunito_sans"
-        android:text="Save Profile"
+        android:text="@string/btn_save_profile"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 </LinearLayout>

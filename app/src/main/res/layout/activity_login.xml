@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -11,8 +12,7 @@
 
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
@@ -44,7 +44,7 @@
             android:id="@+id/et_login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_supersmall"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:background="@drawable/input_white_rounded"
             android:fontFamily="@font/nunito"
             android:hint="@string/title_password"
@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="@dimen/margin_supersmall">
@@ -107,14 +107,15 @@
                 android:text="@string/title_sign_up"
                 android:textColor="@color/green_light"
                 android:textSize="@dimen/text_supersmall"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:targetApi="m" />
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_superlarge"
+            android:layout_marginTop="@dimen/margin_large"
             android:text="@string/title_another_login"
             android:textAlignment="center"
             android:textSize="@dimen/text_small"

@@ -24,9 +24,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/margin_supersmall"
+            android:layout_marginStart="@dimen/margin_supersmall"
             android:layout_marginTop="@dimen/margin_supersmall"
-            android:layout_toRightOf="@+id/iv_cctv_thumbnail"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
@@ -35,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_sans"
-                android:text="CCTV Halaman"
+                android:text="@string/datalist_cctv_name"
                 android:textSize="@dimen/text_small"
                 android:textStyle="bold" />
 
@@ -44,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
-                android:text="Aman"
+                android:text="@string/datalist_cctv_status"
                 android:textColor="@android:color/holo_green_light" />
         </LinearLayout>
 
@@ -53,10 +52,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/margin_supersmall"
-            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_supersmall"
+            android:layout_marginEnd="@dimen/margin_small"
             android:fontFamily="@font/nunito"
-            android:text="Info"
+            android:text="@string/datalist_cctv_info"
             android:textAlignment="textEnd"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="@dimen/text_small"

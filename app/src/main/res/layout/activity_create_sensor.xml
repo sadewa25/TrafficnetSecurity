@@ -38,7 +38,7 @@
             android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
-            android:text="ID Sensor" />
+            android:text="@string/title_sensor_id" />
 
         <EditText
             android:id="@+id/et_sensor_id"
@@ -47,7 +47,7 @@
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/input_white_rounded"
-            android:hint="345323432"
+            android:hint="@string/hint_sensor_id"
             android:padding="@dimen/margin_supersmall" />
 
         <TextView
@@ -59,7 +59,7 @@
             android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
-            android:text="SSID" />
+            android:text="@string/title_ssid" />
 
         <EditText
             android:id="@+id/et_ssid"
@@ -68,7 +68,7 @@
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/input_white_rounded"
-            android:hint="WiFi-Kantor-Safevision"
+            android:hint="@string/hint_ssid"
             android:padding="@dimen/margin_supersmall" />
 
         <TextView
@@ -89,7 +89,7 @@
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/input_white_rounded"
-            android:hint="123456789"
+            android:hint="@string/title_password"
             android:inputType="textPassword"
             android:padding="@dimen/margin_supersmall" />
 
@@ -106,7 +106,7 @@
         android:layout_marginBottom="@dimen/margin_small"
         android:background="@drawable/btn_dark_rounded"
         android:fontFamily="@font/nunito"
-        android:text="Tambah Sensor"
+        android:text="@string/btn_sensor"
         android:textColor="@android:color/white"
         android:textSize="@dimen/text_small"
         android:textStyle="bold" />
