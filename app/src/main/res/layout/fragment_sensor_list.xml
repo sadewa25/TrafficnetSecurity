@@ -1,0 +1,43 @@
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.codedirect.trafficnetsecurity.ui.sensorlist.SensorListViewModel" />
+
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.sensorlist.SensorListFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:visibility="@{viewmodel.isLoading ? View.VISIBLE : View.INVISIBLE}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="96dp"
+            android:text="@string/hint_empty"
+            android:visibility="@{(viewmodel.isEmpty &amp;&amp; !viewmodel.isLoading) ? View.VISIBLE : View.INVISIBLE}" />
+
+    </FrameLayout>
+
+
+</layout>

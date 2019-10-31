@@ -1,0 +1,106 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.codedirect.trafficnetsecurity.ui.homeprofile.HomeProfileViewModel" />
+
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_superlarge">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_person" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_supersmall"
+                android:background="@drawable/input_white_rounded"
+                android:hint="@string/hint_username"
+                android:inputType="textCapCharacters"
+                android:padding="@dimen/margin_supersmall"
+                android:text="@={viewmodel.usernameField}" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_supersmall"
+                android:background="@drawable/input_white_rounded"
+                android:hint="@string/title_email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/margin_supersmall"
+                android:text="@={viewmodel.emailField}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/msg_change_password"
+                android:textColor="@color/red_blood"
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_supersmall"
+                android:background="@drawable/input_white_rounded"
+                android:hint="@string/hint_old_password"
+                android:inputType="textPassword"
+                android:padding="@dimen/margin_supersmall"
+                android:text="@={viewmodel.currentPasswordField}" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_supersmall"
+                android:background="@drawable/input_white_rounded"
+                android:hint="@string/hint_new_password"
+                android:inputType="textPassword"
+                android:padding="@dimen/margin_supersmall"
+                android:text="@={viewmodel.newPasswordField}" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_superlarge"
+                android:background="@drawable/btn_dark_rounded"
+                android:fontFamily="@font/nunito_sans"
+                android:onClick="@{(v) -> viewmodel.save()}"
+                android:text="@string/btn_save_profile"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_superlarge"
+                android:layout_marginRight="@dimen/margin_small"
+                android:background="@drawable/btn_light_bordered_dark_rounded"
+                android:fontFamily="@font/nunito_sans"
+                android:onClick="@{(v) -> viewmodel.logout()}"
+                android:text="@string/btn_logout"
+                android:textColor="@color/dark_coal"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

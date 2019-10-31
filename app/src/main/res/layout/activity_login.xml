@@ -1,105 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="wrap_content"
-    tools:context="com.codedirect.login.LoginActivity">
+<layout>
 
-    <ImageView
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.codedirect.trafficnetsecurity.ui.login.LoginViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo_safevision"
-        android:id="@+id/login_logo"
-        android:padding="30dp"
-        android:layout_marginTop="@dimen/margin_medium"/>
-
-    <EditText
-        android:layout_below="@id/login_logo"
-        android:layout_marginTop="@dimen/margin_small"
-        android:background="@drawable/rectangle_input"
-        android:hint="@string/title_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_small"
-        android:padding="@dimen/margin_supersmall"
-        android:layout_marginRight="@dimen/margin_small"
-        android:id="@+id/login_email"
-        android:fontFamily="@font/nunito"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/margin_small"
-        android:layout_marginLeft="@dimen/margin_small"
-        android:layout_below="@+id/login_email"
-        android:layout_marginTop="@dimen/margin_supersmall"
-        android:background="@drawable/rectangle_input"
-        android:hint="@string/title_password"
-        android:fontFamily="@font/nunito"
-        android:id="@+id/login_password"
-        android:padding="@dimen/margin_supersmall"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/login_button"
-        android:layout_below="@+id/login_password"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginLeft="@dimen/margin_small"
-        android:layout_marginRight="@dimen/margin_small"
-        android:text="@string/title_login"
-        android:textColor="@android:color/white"
-        android:fontFamily="@font/nunito"
-        android:textStyle="bold"
-        android:id="@+id/login_btn"
-        android:textSize="@dimen/text_small"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/title_dontaccount"
-        android:layout_marginTop="@dimen/margin_small"
-        android:textAlignment="center"
-        android:layout_marginRight="@dimen/margin_supersmall"
-        android:layout_marginLeft="@dimen/margin_supersmall"
-        android:fontFamily="@font/nunito"
-        android:textSize="@dimen/text_small"
-        android:textStyle="bold"
-        android:layout_below="@+id/login_btn"/>
-
-    <LinearLayout
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_superlarge"
+        tools:context=".ui.login.LoginActivity">
 
         <ImageView
-            android:padding="10dp"
-            android:layout_width="wrap_content"
-            android:src="@drawable/login_google"
-            android:layout_height="wrap_content">
-        </ImageView>
-        <ImageView
-            android:padding="10dp"
-            android:layout_width="wrap_content"
-            android:src="@drawable/login_facebook"
-            android:layout_height="wrap_content">
+            android:id="@+id/iv_login_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_superlarge"
+            android:padding="@dimen/margin_supersmall"
+            android:src="@drawable/logo_safevision" />
 
-        </ImageView>
-        <ImageView
+        <EditText
+            android:id="@+id/et_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_superlarge"
+            android:background="@drawable/input_white_rounded"
+            android:fontFamily="@font/nunito"
+            android:hint="@string/title_email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/margin_supersmall"
+            android:text="@={viewmodel.usernameField}" />
 
-            android:padding="10dp"
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/input_white_rounded"
+            android:fontFamily="@font/nunito"
+            android:hint="@string/title_password"
+            android:inputType="textPassword"
+            android:padding="@dimen/margin_supersmall"
+            android:text="@={viewmodel.passwordField}" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_dark_rounded"
+                android:fontFamily="@font/nunito"
+                android:onClick="@{v -> viewmodel.doSignIn()}"
+                android:text="@string/title_login"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold"
+                android:visibility="@{viewmodel.isLoading ? View.GONE : View.VISIBLE}" />
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="@{viewmodel.isLoading ? View.VISIBLE : View.GONE}" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_supersmall">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:text="@string/title_dontaccount"
+                android:textSize="@dimen/text_supersmall"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_link_to_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_supersmall"
+                android:fontFamily="@font/nunito"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="@{v -> viewmodel.openRegistration()}"
+                android:text="@string/title_sign_up"
+                android:textColor="@color/green_light"
+                android:textSize="@dimen/text_supersmall"
+                android:textStyle="bold"
+                tools:targetApi="m" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/title_another_login"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:src="@drawable/login_twitter"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        </ImageView>
+            <Button
+                android:layout_width="@dimen/default_button_size"
+                android:layout_height="@dimen/default_button_size"
+                android:background="@drawable/login_google" />
+
+            <Button
+                android:layout_width="@dimen/default_button_size"
+                android:layout_height="@dimen/default_button_size"
+                android:layout_margin="@dimen/default_btn_padding"
+                android:background="@drawable/login_facebook" />
+
+            <Button
+                android:layout_width="@dimen/default_button_size"
+                android:layout_height="@dimen/default_button_size"
+                android:background="@drawable/login_twitter" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+
+</layout>
