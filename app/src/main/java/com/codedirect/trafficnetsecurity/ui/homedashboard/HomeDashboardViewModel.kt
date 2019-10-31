@@ -1,27 +1,26 @@
-package com.codedirect.trafficnetsecurity.ui.sensorlist
+package com.codedirect.trafficnetsecurity.ui.homedashboard
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.viewModelScope
 import com.codedirect.trafficnetsecurity.data.remote.response.SensorData
 import com.codedirect.trafficnetsecurity.data.repo.SensorRepository
-import com.codedirect.trafficnetsecurity.model.DataModel
+import com.codedirect.trafficnetsecurity.data.util.orZero
+import com.codedirect.trafficnetsecurity.model.MarkerModel
 import com.codedirect.trafficnetsecurity.ui.AppViewModel
 import kotlinx.coroutines.launch
 
-class SensorListViewModel(val sensorRepository: SensorRepository) : AppViewModel() {
+class HomeDashboardViewModel(val sensorRepository: SensorRepository) : AppViewModel() {
 
     private val mSensorList by lazy { MutableLiveData<List<SensorData>>() }
 
-    val sensorList: LiveData<List<DataModel>> by lazy {
-        Transformations.map(mSensorList) { source ->
-            source.map {
-                DataModel(
-                    "",
+    val sensorList by lazy {
+        Transformations.map(mSensorList) { data ->
+            data.map {
+                MarkerModel(
                     it.id.orEmpty(),
-                    it.jenis.orEmpty(),
-                    it.status.orEmpty()
+                    it.lat.orZero().toDouble(),
+                    it.jsonMemberLong.orZero().toDouble()
                 )
             }
         }
@@ -31,10 +30,11 @@ class SensorListViewModel(val sensorRepository: SensorRepository) : AppViewModel
         fetchSensorList()
     }
 
-    fun fetchSensorList() {
+    private fun fetchSensorList() {
         viewModelScope.launch {
-            handle(sensorRepository.getSensorList()) {
+            with(sensorRepository.getSensorList()) {
                 data?.let { mSensorList.value = it }
+                error?.let { toast.value = it }
             }
         }
     }
