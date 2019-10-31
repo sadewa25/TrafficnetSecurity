@@ -9,6 +9,12 @@ import kotlinx.coroutines.launch
 
 class RegisterViewModel(val userRepository: UserRepository) : AppViewModel() {
 
+    companion object {
+
+        const val OPEN_LOGIN_PAGE = 22
+
+    }
+
     val usernameField by lazy { MutableLiveData<String>("") }
     val emailField by lazy { MutableLiveData<String>("") }
     val passwordField by lazy { MutableLiveData<String>("") }
@@ -25,7 +31,10 @@ class RegisterViewModel(val userRepository: UserRepository) : AppViewModel() {
                 passwordField.value.orEmpty()
             )
             handle(userRepository.register(request)) {
-                data?.let { toast.value = it }
+                data?.let {
+                    toast.value = it
+                    action.value = OPEN_LOGIN_PAGE
+                }
             }
 
             isLoading.value = false

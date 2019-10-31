@@ -27,6 +27,9 @@ class SensorListViewModel(val sensorRepository: SensorRepository) : AppViewModel
         }
     }
 
+    val isLoading by lazy { MutableLiveData(false) }
+    val isEmpty by lazy { Transformations.map(mSensorList) { it.isEmpty() } }
+
     override fun init() {
         fetchSensorList()
     }

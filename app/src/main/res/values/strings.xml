@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TrafficnetSecurity</string>
+    <string name="app_name">Safevision</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -43,6 +43,7 @@
     <string name="btn_submit">Submit</string>
     <string name="btn_laporkan">LAPORKAN</string>
     <string name="btn_save_profile">Save Profile</string>
+    <string name="btn_logout">Logout</string>
 
     <string name="hint_username">Buat username baru</string>
     <string name="hint_email">Masukkan email Anda</string>
@@ -57,6 +58,7 @@
     <string name="hint_fullname">Fullname</string>
     <string name="hint_address">Address</string>
     <string name="hint_city">City</string>
+    <string name="hint_empty">Data tidak tersedia</string>
 
     <string name="main_title_cctv">Semua Laporan CCTV Anda</string>
     <string name="main_title_sensor">Sensor Pintu Rumah Anda</string>

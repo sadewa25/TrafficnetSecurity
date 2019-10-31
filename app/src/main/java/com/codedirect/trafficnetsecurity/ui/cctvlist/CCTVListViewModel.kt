@@ -20,15 +20,20 @@ class CCTVListViewModel(val cctvRepository: CCTVRepository) : AppViewModel() {
         }
     }
 
+    val isLoading: MutableLiveData<Boolean> by lazy { MutableLiveData(false) }
+    val isEmpty: LiveData<Boolean> by lazy { Transformations.map(mCCTVList) { it.isNullOrEmpty() } }
+
     override fun init() {
         fetchCCTVList()
     }
 
     fun fetchCCTVList() {
         viewModelScope.launch {
+            isLoading.value = true
             handle(cctvRepository.getCCTVList()) {
                 data?.let { mCCTVList.value = it }
             }
+            isLoading.value = false
         }
     }
 

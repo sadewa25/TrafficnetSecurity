@@ -1,13 +1,21 @@
 package com.codedirect.trafficnetsecurity.ui.register
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import com.codedirect.trafficnetsecurity.R
+import com.codedirect.trafficnetsecurity.databinding.ActivityRegisterBinding
+import com.codedirect.trafficnetsecurity.ui.AppActivity
+import org.koin.android.ext.android.inject
 
-class RegisterActivity : AppCompatActivity() {
+class RegisterActivity : AppActivity<ActivityRegisterBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+    override val viewModel by inject<RegisterViewModel>()
+
+    override val layoutId by lazy { R.layout.activity_register }
+
+    override fun chooseAction(action: Int) {
+        when (action) {
+            RegisterViewModel.OPEN_LOGIN_PAGE -> navigator.openLogin()
+            else -> super.chooseAction(action)
+        }
     }
+
 }
