@@ -37,17 +37,18 @@
     <string name="subtitle_sensor">Halaman ini menunjukkan semua status sensor pintu di rumah anda</string>
     <string name="subtitle_laporan">Isi form sesuai dengan jenis pelayanan</string>
 
-    <string name="btn_register">Save Profile</string>
+    <string name="btn_register">Submit</string>
     <string name="btn_cctv">Tambah CCTV</string>
     <string name="btn_sensor">Tambah Sensor</string>
     <string name="btn_submit">Submit</string>
     <string name="btn_laporkan">LAPORKAN</string>
     <string name="btn_save_profile">Save Profile</string>
 
-    <string name="hint_username">Sangsakawira</string>
-    <string name="hint_email">sangsakawira@gmail.com</string>
+    <string name="hint_username">Buat username baru</string>
+    <string name="hint_email">Masukkan email Anda</string>
     <string name="hint_ktp">356473829381889</string>
     <string name="hint_kota">Kota Surabaya</string>
+    <string name="hint_new_password">Buat password baru</string>
     <string name="hint_sensor_id">345323432</string>
     <string name="hint_ssid">WiFi-Kantor-Safevision</string>
     <string name="hint_tipe">Kebakaran</string>

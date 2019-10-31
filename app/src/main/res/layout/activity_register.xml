@@ -1,111 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/margin_superlarge"
-    tools:context=".ui.register.RegisterActivity">
+<layout>
 
-    <LinearLayout
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.codedirect.trafficnetsecurity.ui.register.RegisterViewModel" />
+
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/margin_superlarge"
+        android:paddingTop="@dimen/margin_large"
+        android:paddingEnd="@dimen/margin_superlarge"
+        tools:context=".ui.register.RegisterActivity">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:fontFamily="@font/nunito"
-            android:padding="@dimen/margin_supersmall"
-            android:text="@string/title_register"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/text_title"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/subtitle_register"
-            android:textAlignment="center" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/nunito"
+                android:padding="@dimen/margin_supersmall"
+                android:text="@string/title_register"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_title"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:fontFamily="@font/nunito"
-            android:text="@string/title_username" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_register"
+                android:textAlignment="center" />
 
-        <EditText
-            android:id="@+id/et_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/input_white_rounded"
-            android:hint="@string/hint_username"
-            android:padding="@dimen/margin_supersmall" />
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/nunito"
+                android:text="@string/title_username" />
 
-        <TextView
-            android:id="@+id/tv_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:fontFamily="@font/nunito"
-            android:text="@string/title_email" />
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_white_rounded"
+                android:hint="@string/hint_username"
+                android:inputType="textCapCharacters"
+                android:padding="@dimen/margin_supersmall"
+                android:text="@={viewmodel.usernameField}" />
 
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/input_white_rounded"
-            android:hint="@string/hint_email"
-            android:padding="@dimen/margin_supersmall" />
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/nunito"
+                android:text="@string/title_email" />
 
-        <TextView
-            android:id="@+id/tv_ktp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:fontFamily="@font/nunito"
-            android:text="@string/title_ktp" />
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_white_rounded"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/margin_supersmall"
+                android:text="@={viewmodel.emailField}" />
 
-        <EditText
-            android:id="@+id/et_ktp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/input_white_rounded"
-            android:hint="@string/hint_ktp"
-            android:padding="@dimen/margin_supersmall" />
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/nunito"
+                android:text="@string/title_password" />
 
-        <TextView
-            android:id="@+id/tv_kota"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:fontFamily="@font/nunito"
-            android:text="@string/title_kota" />
-
-        <EditText
-            android:id="@+id/et_kota"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/input_white_rounded"
-            android:hint="@string/hint_kota"
-            android:padding="@dimen/margin_supersmall" />
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_white_rounded"
+                android:hint="@string/hint_new_password"
+                android:inputType="textPassword"
+                android:padding="@dimen/margin_supersmall"
+                android:text="@={viewmodel.passwordField}" />
 
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_superlarge"
-            android:background="@drawable/btn_dark_rounded"
-            android:fontFamily="@font/nunito"
-            android:text="@string/btn_register"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/text_small"
-            android:textStyle="bold" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_superlarge">
 
-    </LinearLayout>
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_dark_rounded"
+                    android:fontFamily="@font/nunito"
+                    android:onClick="@{(v) -> viewmodel.register()}"
+                    android:text="@string/btn_register"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold"
+                    android:visibility="@{viewmodel.isLoading ? View.GONE : View.VISIBLE}" />
 
-</ScrollView>
+                <androidx.core.widget.ContentLoadingProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="@{viewmodel.isLoading ? View.VISIBLE : View.INVISIBLE}" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>
