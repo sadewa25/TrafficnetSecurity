@@ -11,15 +11,12 @@
         android:id="@+id/home_header"
         android:layout_height="wrap_content"
         android:padding="@dimen/margin_supersmall"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginBottom="@dimen/margin_small"
-        android:layout_marginRight="@dimen/margin_small"
-        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_margin="@dimen/margin_small"
         android:orientation="horizontal">
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="Home Status"
+            android:text="@string/title_home_status"
             android:fontFamily="@font/nunito"
             android:textStyle="bold"
             android:textSize="@dimen/text_medium"
@@ -28,7 +25,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:trackTint="@color/red_blood" />
+            android:trackTint="@color/red_blood"
+            tools:targetApi="m" />
     </LinearLayout>
 
     <com.mapbox.mapboxsdk.maps.MapView
@@ -53,7 +51,7 @@
         android:layout_marginBottom="@dimen/margin_small"
         android:background="@drawable/btn_dark_rounded"
         android:fontFamily="@font/nunito"
-        android:text="LAPORKAN"
+        android:text="@string/btn_laporkan"
         android:textColor="@android:color/white"
         android:textSize="@dimen/text_small" />
 

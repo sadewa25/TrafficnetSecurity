@@ -14,7 +14,7 @@
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
             android:padding="8dp"
-            android:text="Laporan"
+            android:text="@string/title_laporan"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_title"
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Isi form sesuai dengan jenis pelayanan"
+            android:text="@string/subtitle_laporan"
             android:textAlignment="center" />
 
         <TextView
@@ -35,7 +35,7 @@
             android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
-            android:text="Tipe" />
+            android:text="@string/title_tipe" />
 
         <EditText
             android:id="@+id/et_type"
@@ -44,7 +44,7 @@
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/input_white_rounded"
-            android:hint="Kebakaran"
+            android:hint="@string/hint_tipe"
             android:padding="@dimen/margin_supersmall" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
-            android:text="Keterangan" />
+            android:text="@string/title_keterangan" />
 
         <EditText
             android:id="@+id/et_info"
@@ -65,8 +65,8 @@
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/input_white_rounded"
+            android:hint="@string/hint_keterangan"
             android:gravity="top"
-            android:hint="@string/hint_email"
             android:lines="5"
             android:padding="@dimen/margin_supersmall" />
 
@@ -79,7 +79,7 @@
             android:padding="@dimen/margin_supersmall"
             android:paddingStart="@dimen/margin_large"
             android:paddingEnd="@dimen/margin_large"
-            android:text="Bukti" />
+            android:text="@string/title_bukti" />
 
         <EditText
             android:id="@+id/et_proof"
@@ -88,7 +88,7 @@
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginRight="@dimen/margin_small"
             android:background="@drawable/input_white_rounded"
-            android:hint="123478265081"
+            android:hint="@string/hint_bukti"
             android:padding="@dimen/margin_supersmall" />
 
         <TextView
@@ -116,14 +116,13 @@
             android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/margin_small"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginRight="@dimen/margin_small"
             android:layout_marginBottom="@dimen/margin_small"
             android:background="@drawable/btn_dark_rounded"
             android:fontFamily="@font/nunito"
-            android:text="Submit"
+            android:text="@string/btn_submit"
             android:textColor="@android:color/white"
             android:textSize="@dimen/text_small"
             android:textStyle="bold" />

@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:fontFamily="@font/nunito"
             android:padding="@dimen/margin_supersmall"
             android:text="@string/title_register"
@@ -49,7 +49,7 @@
             android:id="@+id/tv_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:fontFamily="@font/nunito"
             android:text="@string/title_email" />
 
@@ -65,7 +65,7 @@
             android:id="@+id/tv_ktp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:fontFamily="@font/nunito"
             android:text="@string/title_ktp" />
 
@@ -81,7 +81,7 @@
             android:id="@+id/tv_kota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:fontFamily="@font/nunito"
             android:text="@string/title_kota" />
 

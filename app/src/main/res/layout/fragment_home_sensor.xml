@@ -20,7 +20,7 @@
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/nunito"
             android:padding="8dp"
-            android:text="Sensor Pintu Rumah Anda"
+            android:text="@string/main_title_sensor"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_medium"
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_small"
-            android:text="Halaman ini menunjukkan semua status sensor pintu di rumah anda"
+            android:text="@string/subtitle_sensor"
             android:textAlignment="center" />
 
 
