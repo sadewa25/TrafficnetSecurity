@@ -5,6 +5,7 @@ import com.codedirect.trafficnetsecurity.ui.createsensor.CreateSensorViewModel
 import com.codedirect.trafficnetsecurity.ui.homeprofile.HomeProfileViewModel
 import com.codedirect.trafficnetsecurity.ui.login.LoginViewModel
 import com.codedirect.trafficnetsecurity.ui.register.RegisterViewModel
+import com.codedirect.trafficnetsecurity.ui.sensordetail.SensorDetailViewModel
 import com.codedirect.trafficnetsecurity.ui.sensorlist.SensorListViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -19,5 +20,6 @@ val uiModule = module {
 
     viewModel { HomeProfileViewModel(get(), get()) }
     viewModel { CreateSensorViewModel(get()) }
+    viewModel { SensorDetailViewModel() }
 
 }

@@ -1,5 +1,6 @@
 package com.codedirect.trafficnetsecurity.ui.login
 
+import android.os.Bundle
 import com.codedirect.trafficnetsecurity.R
 import com.codedirect.trafficnetsecurity.databinding.ActivityLoginBinding
 import com.codedirect.trafficnetsecurity.ui.AppActivity
@@ -10,6 +11,13 @@ class LoginActivity : AppActivity<ActivityLoginBinding>() {
     override val viewModel by viewModel<LoginViewModel>()
 
     override val layoutId by lazy { R.layout.activity_login }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        viewModel.init()
+        shouldInit = false
+
+        super.onCreate(savedInstanceState)
+    }
 
     override fun chooseAction(action: Int) {
         when (action) {

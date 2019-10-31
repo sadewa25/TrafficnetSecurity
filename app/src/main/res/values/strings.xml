@@ -33,6 +33,7 @@
     <string name="title_keterangan">Keterangan</string>
     <string name="title_bukti">Bukti</string>
     <string name="title_home_status">Home Status</string>
+    <string name="title_sensor_status">Sensor Status</string>
 
     <string name="subtitle_register">Isi form sesuai dengan identitas anda</string>
     <string name="subtitle_register_sensor">Tambah sensor di akun anda</string>

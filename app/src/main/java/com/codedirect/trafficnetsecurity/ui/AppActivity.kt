@@ -14,6 +14,8 @@ abstract class AppActivity<T : ViewDataBinding> : AppCompatActivity() {
 
     protected val binding by lazy { DataBindingUtil.setContentView<T>(this, layoutId) }
 
+    protected var shouldInit = true
+
     protected abstract val viewModel: AppViewModel
 
     abstract val layoutId: Int
@@ -28,7 +30,7 @@ abstract class AppActivity<T : ViewDataBinding> : AppCompatActivity() {
         viewModel.action.observe(this, Observer { chooseAction(it) })
         viewModel.toast.observe(this, Observer { showMessage(it) })
 
-        viewModel.init()
+        if (shouldInit) viewModel.init()
     }
 
     protected open fun chooseAction(action: Int) {

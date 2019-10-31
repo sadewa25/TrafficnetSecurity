@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.codedirect.trafficnetsecurity.ui.sensordetail.SensorDetailViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:minWidth="240dp"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_small">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_sensor_id" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.sensorId}"
+            android:textColor="@color/dark_coal"
+            android:textSize="18sp"
+            tools:text="SNSR0018" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_supersmall"
+            android:text="@string/title_sensor_type" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.sensorType}"
+            android:textColor="@color/dark_coal"
+            android:textSize="18sp"
+            tools:text="Alarm" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_supersmall"
+            android:text="@string/title_sensor_status" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.sensorStatus}"
+            android:textColor="@color/green_dark"
+            android:textSize="18sp"
+            tools:text="Online" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_supersmall"
+            android:text="@string/title_sensor_location" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.sensorLocation}"
+            android:textColor="@color/dark_coal"
+            android:textSize="12sp"
+            tools:text="28.12337721, -128.12337721" />
+
+    </LinearLayout>
+
+</layout>

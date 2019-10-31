@@ -6,7 +6,7 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.viewModelScope
 import com.codedirect.trafficnetsecurity.data.remote.response.SensorData
 import com.codedirect.trafficnetsecurity.data.repo.SensorRepository
-import com.codedirect.trafficnetsecurity.model.DataModel
+import com.codedirect.trafficnetsecurity.model.SensorModel
 import com.codedirect.trafficnetsecurity.ui.AppViewModel
 import kotlinx.coroutines.launch
 
@@ -14,14 +14,15 @@ class SensorListViewModel(val sensorRepository: SensorRepository) : AppViewModel
 
     private val mSensorList by lazy { MutableLiveData<List<SensorData>>() }
 
-    val sensorList: LiveData<List<DataModel>> by lazy {
+    val sensorList: LiveData<List<SensorModel>> by lazy {
         Transformations.map(mSensorList) { source ->
             source.map {
-                DataModel(
-                    "",
+                SensorModel(
                     it.id.orEmpty(),
                     it.jenis.orEmpty(),
-                    it.status.orEmpty()
+                    it.lat?.toDoubleOrNull() ?: 0.0,
+                    it.jsonMemberLong?.toDoubleOrNull() ?: 0.0,
+                    it.status?.toIntOrNull() == 1
                 )
             }
         }
