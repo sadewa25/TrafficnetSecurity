@@ -8,16 +8,19 @@ class UserRepository(
     private val mDataCache: DataCache
 ) : IUserRepository {
 
-    override suspend fun signIn(email: String, password: String): Boolean {
-        return mAPIEndpoint.login(email, password).token?.let {
-            mDataCache.setToken(it)
-            true
-        } ?: false
+    override suspend fun register(username: String, email: String, password: String): String? {
+        return mAPIEndpoint.register(username, email, password).message
+    }
+
+    override suspend fun signIn(email: String, password: String): String? {
+        return mAPIEndpoint.login(email, password).let { data ->
+            data.token?.let { mDataCache.setToken(it) }
+            data.message
+        }
     }
 
     override suspend fun changePassword(currentPassword: String, newPassword: String): Boolean {
-        mAPIEndpoint.changePassword(currentPassword, newPassword)
-        return true
+        return mAPIEndpoint.changePassword(currentPassword, newPassword).let { true }
     }
 
     override suspend fun isLoggedIn(): Boolean = mDataCache.getToken() != null

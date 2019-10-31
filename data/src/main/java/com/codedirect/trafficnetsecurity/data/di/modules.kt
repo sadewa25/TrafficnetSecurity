@@ -3,6 +3,7 @@ package com.codedirect.trafficnetsecurity.data.di
 import android.content.Context
 import com.codedirect.trafficnetsecurity.data.local.prefs.DataCache
 import com.codedirect.trafficnetsecurity.data.remote.APIEndpoint
+import com.codedirect.trafficnetsecurity.data.remote.interceptor.AccessTokenInterceptor
 import com.codedirect.trafficnetsecurity.data.repo.SensorRepository
 import com.codedirect.trafficnetsecurity.data.repo.UserRepository
 import okhttp3.OkHttpClient
@@ -18,10 +19,13 @@ val dataModule = module {
         OkHttpClient
             .Builder()
             .addInterceptor(get<HttpLoggingInterceptor>())
+            .addInterceptor(get<AccessTokenInterceptor>())
             .build()
     }
 
     single { HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY } }
+
+    single { AccessTokenInterceptor(get()) }
 
     single {
         Retrofit

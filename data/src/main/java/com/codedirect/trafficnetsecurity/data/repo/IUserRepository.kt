@@ -2,7 +2,9 @@ package com.codedirect.trafficnetsecurity.data.repo
 
 interface IUserRepository {
 
-    suspend fun signIn(email: String, password: String): Boolean
+    suspend fun register(username: String, email: String, password: String): String?
+
+    suspend fun signIn(email: String, password: String): String?
 
     suspend fun changePassword(currentPassword: String, newPassword: String): Boolean
 

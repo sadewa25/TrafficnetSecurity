@@ -19,7 +19,7 @@ class SensorListViewModel(val sensorRepository: SensorRepository) : AppViewModel
             source.map {
                 DataModel(
                     "",
-                    it.username.orEmpty(),
+                    it.id.orEmpty(),
                     it.jenis.orEmpty(),
                     it.status.orEmpty()
                 )

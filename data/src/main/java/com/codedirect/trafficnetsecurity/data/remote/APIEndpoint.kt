@@ -1,10 +1,19 @@
 package com.codedirect.trafficnetsecurity.data.remote
 
 import com.codedirect.trafficnetsecurity.data.remote.response.LoginData
+import com.codedirect.trafficnetsecurity.data.remote.response.MessageData
 import com.codedirect.trafficnetsecurity.data.remote.response.SensorData
 import retrofit2.http.*
 
 interface APIEndpoint {
+
+    @FormUrlEncoded
+    @POST("user/resident/register")
+    suspend fun register(
+        @Field("username") username: String,
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): MessageData
 
     @FormUrlEncoded
     @POST("user/login/resident")
