@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margin_supersmall"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_supersmall"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/margin_supersmall"
     android:orientation="vertical"
     app:cardCornerRadius="8dp"
-    app:cardElevation="5dp">
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,6 +21,7 @@
             android:id="@+id/iv_cctv_thumbnail"
             android:layout_width="96dp"
             android:layout_height="96dp"
+            android:padding="8dp"
             android:src="@drawable/ic_home_black_24dp" />
 
         <LinearLayout
@@ -25,7 +29,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/margin_supersmall"
-            android:layout_marginTop="@dimen/margin_supersmall"
             android:gravity="center_vertical"
             android:orientation="vertical">
 

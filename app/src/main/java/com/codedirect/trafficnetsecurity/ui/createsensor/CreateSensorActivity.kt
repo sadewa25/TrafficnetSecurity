@@ -1,13 +1,20 @@
 package com.codedirect.trafficnetsecurity.ui.createsensor
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import com.codedirect.trafficnetsecurity.R
+import com.codedirect.trafficnetsecurity.databinding.ActivityCreateSensorBinding
+import com.codedirect.trafficnetsecurity.ui.AppActivity
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CreateSensorActivity : AppCompatActivity() {
+class CreateSensorActivity : AppActivity<ActivityCreateSensorBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_sensor)
+    override val viewModel by viewModel<CreateSensorViewModel>()
+
+    override val layoutId by lazy { R.layout.activity_create_sensor }
+
+    override fun chooseAction(action: Int) {
+        when (action) {
+            CreateSensorViewModel.OPEN_PREVIOUS_PAGE -> finish()
+            else -> super.chooseAction(action)
+        }
     }
 }

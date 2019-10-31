@@ -32,6 +32,8 @@ class HomeSensorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        starterIntent = Intent(activity, CreateSensorActivity::class.java)
+
         btn_add.setOnClickListener { startActivity(starterIntent) }
 
         setupViewPager(vp_sensor, tabs_sensor, fragmentManager)

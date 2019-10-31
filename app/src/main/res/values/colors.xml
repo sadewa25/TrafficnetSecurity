@@ -11,6 +11,7 @@
     <color name="green_dark">#2B8B35</color>
     <color name="yellow_gold">#FFA700</color>
     <color name="red_blood">#B13333</color>
+    <color name="red_danger">#D52D2D</color>
 
     <color name="gray_cloud">#E9E9E9</color>
     <color name="gray_smoke">#D5D5D5</color>

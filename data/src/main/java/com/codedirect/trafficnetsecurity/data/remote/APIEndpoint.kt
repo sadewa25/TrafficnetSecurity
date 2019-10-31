@@ -45,6 +45,7 @@ interface APIEndpoint {
     @GET("sensor/getById/{sensorId}")
     suspend fun getSensorById(@Path("sensorId") sensorId: String): SensorData
 
+    @FormUrlEncoded
     @POST("sensor/create")
     suspend fun createSensor(
         @Field("id") id: String,

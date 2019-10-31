@@ -7,7 +7,10 @@
     <string name="title_email">Email</string>
     <string name="title_register">Register</string>
     <string name="title_password">Password</string>
+    <string name="title_password_ssid">Password SSID</string>
     <string name="title_login">Login</string>
+    <string name="title_ssid_information">Informasi SSID</string>
+    <string name="title_sensor_location">Lokasi Sensor</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -23,6 +26,7 @@
     <string name="title_dontaccount">Don\'t Have An Account ?</string>
     <string name="title_another_login">Or login using your social media</string>
     <string name="title_sensor_id">ID Sensor</string>
+    <string name="title_sensor_type">Tipe Sensor</string>
     <string name="title_ssid">SSID</string>
     <string name="title_laporan">Laporan</string>
     <string name="title_tipe">Tipe</string>
@@ -51,7 +55,10 @@
     <string name="hint_kota">Kota Surabaya</string>
     <string name="hint_new_password">Buat password baru</string>
     <string name="hint_old_password">Password lama</string>
-    <string name="hint_sensor_id">345323432</string>
+    <string name="hint_sensor_id">Buat sensor ID</string>
+    <string name="hint_sensor_type"></string>
+    <string name="hint_latitude">Latitude</string>
+    <string name="hint_longitude">Longitude</string>
     <string name="hint_ssid">WiFi-Kantor-Safevision</string>
     <string name="hint_tipe">Kebakaran</string>
     <string name="hint_keterangan">Keterangan</string>
